@@ -1,0 +1,90 @@
+---
+settings:
+  name: NetApp Copy and Sync
+  harmony_integration: maestro
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: ko-kr,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,zh-cn,zh-tw
+sidebar:
+  entries:
+  - title: NetApp 복사 및 동기화 문서
+    url: "/index.html"
+  - title: 릴리스 노트
+    entries:
+    - title: 새로운 소식
+      url: "/whats-new.html"
+    - title: 제한 사항
+      url: "/reference-limitations.html"
+  - title: 시작하기
+    entries:
+    - title: NetApp Copy and Sync에 대해 알아보세요
+      url: "/concept-cloud-sync.html"
+    - title: 빠른 시작
+      url: "/task-quick-start.html"
+    - title: 지원되는 동기화 관계 보기
+      url: "/reference-supported-relationships.html"
+    - title: 소스와 타겟을 준비하세요
+      url: "/reference-requirements.html"
+    - title: 네트워킹 준비
+      url: "/reference-networking.html"
+    - title: NetApp Copy and Sync에 로그인하세요
+      url: "/task-login-copyandsync.html"
+    - title: 데이터 브로커 설치
+      entries:
+      - title: AWS에 설치
+        url: "/task-installing-aws.html"
+      - title: Azure에 설치
+        url: "/task-installing-azure.html"
+      - title: Google Cloud에 설치
+        url: "/task-installing-gcp.html"
+      - title: Linux 호스트에 설치
+        url: "/task-installing-linux.html"
+  - title: NetApp 복사 및 동기화 사용
+    entries:
+    - title: 소스와 대상 간 데이터 동기화
+      entries:
+      - title: 객체 스토리지 간 데이터를 동기화하기 위한 데이터 브로커 준비
+        url: "/task-prepare-object-storage.html"
+      - title: 동기화 관계 만들기
+        url: "/task-creating-relationships.html"
+      - title: SMB 공유에서 ACL 복사
+        url: "/task-copying-acls.html"
+      - title: 비행 중 NFS 데이터 암호화
+        url: "/task-nfs-encryption.html"
+      - title: HashiCorp Vault의 비밀을 사용하세요
+        url: "/task-external-vault.html"
+    - title: 라이센스 설정
+      url: "/task-licensing.html"
+    - title: 동기화 관계 관리
+      url: "/task-managing-relationships.html"
+    - title: 데이터 브로커 관리
+      url: "/task-managing-data-brokers.html"
+    - title: 구성을 조정하기 위한 보고서 보기
+      url: "/task-managing-reports.html"
+    - title: 데이터 브로커 제거
+      url: "/task-uninstalling.html"
+  - title: REST API로 자동화
+    url: "/api-sync.html"
+  - title: 개념
+    entries:
+    - title: 라이센스
+      url: "/concept-licensing.html"
+    - title: 데이터 개인정보 보호
+      url: "/concept-privacy.html"
+    - title: 자주 묻는 질문
+      url: "/faq.html"
+  - title: 지식과 지원
+    entries:
+    - title: 지원 등록
+      url: "/task-support-registration.html"
+    - title: 도움을 받으세요
+      url: "/task-get-help.html"
+  - title: 법적 고지 사항
+    url: "/legal-notices.html"
+product-family:
+  name: NetApp Data Services
+  repo: data-services-family

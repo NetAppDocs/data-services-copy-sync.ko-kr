@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: concept-privacy.html 
+keywords: privacy, data privacy, credentials, access to credentials, hashicorp vault 
+summary: NetApp NetApp Copy and Sync를 사용하는 동안 사용자가 제공하는 자격 증명에 액세스할 수 없습니다.  자격 증명은 네트워크에 있는 데이터 브로커 머신에 직접 저장됩니다. 
+---
+= NetApp Copy and Sync의 데이터 개인 정보 보호
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp NetApp Copy and Sync를 사용하는 동안 사용자가 제공하는 자격 증명에 액세스할 수 없습니다.  자격 증명은 네트워크에 있는 데이터 브로커 머신에 직접 저장됩니다.
+
+선택한 구성에 따라 새 관계를 만들 때 복사 및 동기화에서 자격 증명을 입력하라는 메시지가 표시될 수 있습니다.  예를 들어, SMB 서버를 포함하는 관계를 설정하거나 AWS에 데이터 브로커를 배포하는 경우가 있습니다.
+
+이러한 자격 증명은 항상 데이터 브로커 자체에 직접 저장됩니다.  데이터 브로커는 온프레미스든 클라우드 계정이든 네트워크의 머신에 상주합니다.  자격 증명은 NetApp 에 ​​제공되지 않습니다.
+
+자격 증명은 HashiCorp Vault를 사용하여 데이터 브로커 머신에서 로컬로 암호화됩니다.

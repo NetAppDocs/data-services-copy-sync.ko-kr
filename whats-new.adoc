@@ -1,0 +1,1037 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
+summary: NetApp Copy and Sync의 새로운 기능을 알아보세요. 
+---
+= NetApp Copy and Sync의 새로운 기능
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Copy and Sync의 새로운 기능을 알아보세요.
+
+
+
+== 2025년 10월 6일
+
+
+
+=== BlueXP copy and sync 는 이제 NetApp 복사 및 동기화입니다.
+
+BlueXP copy and sync NetApp 복사 및 동기화로 이름이 변경되었습니다.
+
+
+
+=== BlueXP 는 이제 NetApp 콘솔입니다.
+
+강화되고 재구성된 BlueXP 기반을 기반으로 구축된 NetApp 콘솔은 엔터프라이즈급 온프레미스 및 클라우드 환경 전반에서 NetApp 스토리지와 NetApp 데이터 서비스를 중앙에서 관리하여 실시간 통찰력, 더 빠른 워크플로, 간소화된 관리를 제공하며, 높은 보안성과 규정 준수를 보장합니다.
+
+변경된 내용에 대한 자세한 내용은 다음을 참조하세요.link:https://docs.netapp.com/us-en/bluexp-relnotes/index.html["NetApp 콘솔 릴리스 노트"] .
+
+
+
+== 2025년 2월 2일
+
+
+
+=== 데이터 브로커를 위한 새로운 OS 지원
+
+데이터 브로커는 이제 Red Hat Enterprise 9.4, Ubuntu 23.04, Ubuntu 24.04를 실행하는 호스트에서 지원됩니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#linux-host-requirements["Linux 호스트 요구 사항 보기"] .
+
+
+
+== 2024년 10월 27일
+
+
+
+=== 버그 수정
+
+NetApp Copy and Sync와 데이터 브로커를 업데이트하여 몇 가지 버그를 수정했습니다.  새로운 데이터 브로커 버전은 1.0.56입니다.
+
+
+
+== 2024년 9월 16일
+
+
+
+=== 버그 수정
+
+NetApp Copy and Sync와 데이터 브로커를 업데이트하여 몇 가지 버그를 수정했습니다.  새로운 데이터 브로커 버전은 1.0.55입니다.
+
+
+
+== 2024년 8월 11일
+
+
+
+=== 버그 수정
+
+NetApp Copy and Sync와 데이터 브로커를 업데이트하여 몇 가지 버그를 수정했습니다.  새로운 데이터 브로커 버전은 1.0.54입니다.
+
+
+
+== 2024년 7월 14일
+
+
+
+=== 버그 수정
+
+몇 가지 버그를 수정하기 위해 Copy and Sync와 데이터 브로커를 업데이트했습니다.  새로운 데이터 브로커 버전은 1.0.53입니다.
+
+
+
+== 2024년 6월 2일
+
+
+
+=== 버그 수정
+
+NetApp Copy and Sync가 업데이트되어 몇 가지 버그가 수정되었습니다.  데이터 브로커도 보안 업데이트를 적용하도록 업데이트되었습니다.  새로운 데이터 브로커 버전은 1.0.52입니다.
+
+
+
+== 2024년 4월 8일
+
+
+
+=== RHEL 8.9 지원
+
+데이터 브로커는 이제 Red Hat Enterprise Linux 8.9를 실행하는 호스트에서 지원됩니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#linux-host-requirements["Linux 호스트 요구 사항 보기"] .
+
+
+
+== 2024년 2월 11일
+
+
+
+=== 정규식으로 디렉토리 필터링
+
+이제 사용자는 정규식을 사용하여 디렉토리를 필터링할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html#create-other-types-of-sync-relationships["*디렉토리 제외* 기능에 대해 자세히 알아보세요."]
+
+
+
+== 2023년 11월 26일
+
+
+
+=== Azure Blob에 대한 콜드 스토리지 클래스 지원
+
+이제 동기화 관계를 만들 때 콜드 스토리지 Azure Blob 계층을 사용할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html["동기화 관계 생성에 대해 자세히 알아보세요."]
+
+
+
+=== AWS 데이터 브로커에서 텔아비브 지역 지원
+
+이제 AWS에서 데이터 브로커를 생성할 때 텔아비브가 지원되는 지역이 되었습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#creating-the-data-broker["AWS에서 데이터 브로커를 만드는 방법에 대해 자세히 알아보세요"] .
+
+
+
+=== 데이터 브로커를 위한 노드 버전 업데이트
+
+모든 새로운 데이터 브로커는 이제 노드 버전 21.2.0을 사용합니다.  CentOS 7.0 및 Ubuntu Server 18.0과 같이 이 업데이트와 호환되지 않는 데이터 브로커는 더 이상 NetApp Copy and Sync와 함께 작동하지 않습니다.
+
+
+
+== 2023년 9월 3일
+
+
+
+=== 정규식으로 파일 제외
+
+이제 사용자는 정규식을 사용하여 파일을 제외할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html#create-other-types-of-sync-relationships["*파일 확장자 제외* 기능에 대해 자세히 알아보세요."]
+
+
+
+=== Azure 데이터 브로커를 생성할 때 S3 키 추가
+
+이제 사용자는 Azure 데이터 브로커를 생성할 때 AWS S3 액세스 키와 비밀 키를 추가할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-azure.html#creating-the-data-broker["Azure에서 데이터 브로커를 만드는 방법에 대해 자세히 알아보세요."]
+
+
+
+== 2023년 8월 6일
+
+
+
+=== 데이터 브로커를 만들 때 기존 Azure 보안 그룹을 사용하세요.
+
+이제 사용자는 데이터 브로커를 만들 때 기존 Azure 보안 그룹을 사용할 수 있습니다.
+
+데이터 브로커를 생성할 때 사용되는 서비스 계정에는 다음과 같은 권한이 있어야 합니다.
+
+* "Microsoft.Network/networkSecurityGroups/securityRules/read"
+* "Microsoft.Network/networkSecurityGroups/read"
+
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-azure.html["Azure에서 데이터 브로커를 만드는 방법에 대해 자세히 알아보세요."]
+
+
+
+=== Google Storage와 동기화할 때 데이터 암호화
+
+이제 사용자는 Google Storage 버킷을 대상으로 동기화 관계를 생성할 때 고객 관리 암호화 키를 지정할 수 있습니다. 키를 직접 입력하거나 단일 지역의 키 목록에서 선택할 수 있습니다.
+
+데이터 브로커를 생성할 때 사용되는 서비스 계정에는 다음과 같은 권한이 있어야 합니다.
+
+* cloudkms.cryptoKeys.list
+* cloudkms.keyRings.list
+
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/reference-requirements.html#google-cloud-storage-bucket-requirements["Google Cloud Storage 버킷 요구 사항에 대해 자세히 알아보세요."]
+
+
+
+== 2023년 7월 9일
+
+
+
+=== 여러 동기화 관계를 한 번에 제거
+
+이제 사용자는 UI에서 한 번에 두 개 이상의 동기화 관계를 삭제할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-managing-relationships.html#deleting-relationships["동기화 관계 삭제에 대해 자세히 알아보세요."]
+
+
+
+=== ACL만 복사
+
+이제 사용자는 CIF 및 NFS 관계에서 ACL 정보를 복사하기 위한 추가 옵션을 사용할 수 있습니다.  동기화 관계를 만들거나 관리할 때 파일만 복사하거나, ACL 정보만 복사하거나, 파일과 ACL 정보를 복사할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-copying-acls.html["ACL 복사에 대해 자세히 알아보세요."]
+
+
+
+=== Node.js 20으로 업데이트되었습니다.
+
+Copy and Sync가 Node.js 20으로 업데이트되었습니다.  사용 가능한 모든 데이터 브로커가 업데이트됩니다.  이 업데이트와 호환되지 않는 운영 체제는 설치할 수 없으며, 호환되지 않는 기존 시스템에서는 성능 문제가 발생할 수 있습니다.
+
+
+
+== 2023년 6월 11일
+
+
+
+=== 분 단위로 자동 중단 지원
+
+완료되지 않은 활성 동기화는 이제 *동기화 시간 초과* 기능을 사용하여 15분 후에 중단할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html#settings["동기화 시간 초과 설정에 대해 자세히 알아보세요"] .
+
+
+
+=== 액세스 시간 메타데이터 복사
+
+파일 시스템을 포함하는 관계에서 *객체 복사* 기능은 이제 액세스 시간 메타데이터를 복사합니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html#settings["개체 복사 설정에 대해 자세히 알아보세요"] .
+
+
+
+== 2023년 5월 8일
+
+
+
+=== 하드 링크 기능
+
+이제 사용자는 보안되지 않은 NFS 간 관계를 포함하는 동기화에 하드 링크를 포함할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html#settings["파일 유형 설정에 대해 자세히 알아보세요"] .
+
+
+
+=== 보안 NFS 관계에서 데이터 브로커에 대한 사용자 인증서를 추가하는 기능
+
+이제 사용자는 보안 NFS 관계를 생성할 때 대상 데이터 브로커에 대한 자체 인증서를 설정할 수 있습니다.  그렇게 하려면 서버 이름을 설정하고 개인 키와 인증서 ID를 제공해야 합니다.  이 기능은 모든 데이터 브로커에서 사용할 수 있습니다.
+
+
+
+=== 최근 수정된 파일에 대한 확장된 제외 기간
+
+이제 사용자는 예약된 동기화보다 최대 365일 전에 수정된 파일을 제외할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html#settings["최근 수정된 파일 설정에 대해 자세히 알아보세요"] .
+
+
+
+=== UI에서 관계 ID로 관계 필터링
+
+RESTful API를 사용하는 사용자는 이제 관계 ID를 사용하여 관계를 필터링할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/api-sync.html["NetApp Copy and Sync에서 RESTful API를 사용하는 방법에 대해 자세히 알아보세요."] .
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html#settings["제외 디렉터리 설정에 대해 자세히 알아보세요"] .
+
+
+
+== 2023년 4월 2일
+
+
+
+=== Azure Data Lake Storage Gen2 관계에 대한 추가 지원
+
+이제 다음을 사용하여 Azure Data Lake Storage Gen2를 소스 및 대상으로 동기화 관계를 만들 수 있습니다.
+
+* Azure NetApp Files
+* ONTAP 용 Amazon FSx
+* Cloud Volumes ONTAP
+* 온프레미스 ONTAP
+
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/reference-supported-relationships.html["지원되는 동기화 관계에 대해 자세히 알아보세요."] .
+
+
+
+=== 전체 경로로 디렉토리 필터링
+
+이름으로 디렉토리를 필터링하는 것 외에도 이제 전체 경로로 디렉토리를 필터링할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html#settings["제외 디렉터리 설정에 대해 자세히 알아보세요"] .
+
+
+
+== 2023년 3월 7일
+
+
+
+=== AWS 데이터 브로커를 위한 EBS 암호화
+
+이제 계정의 KMS 키를 사용하여 AWS 데이터 브로커 볼륨을 암호화할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#creating-the-data-broker["AWS에서 데이터 브로커를 만드는 방법에 대해 자세히 알아보세요"] .
+
+
+
+== 2023년 2월 5일
+
+
+
+=== Azure Data Lake Storage Gen2, ONTAP S3 Storage 및 NFS에 대한 추가 지원
+
+Cloud Sync 이제 ONTAP S3 스토리지 및 NFS에 대한 추가 동기화 관계를 지원합니다.
+
+* ONTAP S3 스토리지에서 NFS로
+* NFS에서 ONTAP S3 스토리지로
+
+
+Cloud Sync 다음을 위한 소스 및 대상으로 Azure Data Lake Storage Gen2에 대한 추가 지원도 제공합니다.
+
+* NFS 서버
+* SMB 서버
+* ONTAP S3 스토리지
+* StorageGRID
+* IBM 클라우드 객체 스토리지
+
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/reference-supported-relationships.html["지원되는 동기화 관계에 대해 자세히 알아보세요."] .
+
+
+
+=== Amazon Web Services 데이터 브로커 운영 체제로 업그레이드
+
+AWS 데이터 브로커의 운영 체제가 Amazon Linux 2022로 업그레이드되었습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#details-about-the-data-broker-instance["AWS의 데이터 브로커 인스턴스에 대해 자세히 알아보세요"] .
+
+
+
+== 2023년 1월 3일
+
+
+
+=== UI에 데이터 브로커 로컬 구성 표시
+
+이제 사용자가 UI에서 각 데이터 브로커의 로컬 구성을 볼 수 있는 *구성 표시* 옵션이 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-managing-data-brokers.html["데이터 브로커 그룹 관리에 대해 자세히 알아보세요"] .
+
+
+
+=== Azure 및 Google Cloud 데이터 브로커 운영 체제로 업그레이드
+
+Azure와 Google Cloud의 데이터 브로커 운영 체제가 Rocky Linux 9.0으로 업그레이드되었습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-azure.html#details-about-the-data-broker-vm["Azure의 데이터 브로커 인스턴스에 대해 자세히 알아보세요."] .
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-gcp.html#details-about-the-data-broker-vm-instance["Google Cloud의 데이터 브로커 인스턴스에 대해 자세히 알아보세요."] .
+
+
+
+== 2022년 12월 11일
+
+
+
+=== 이름으로 디렉토리 필터링
+
+동기화 관계에 대해 새로운 *디렉토리 이름 제외* 설정을 사용할 수 있습니다.  사용자는 동기화에서 최대 15개의 디렉토리 이름을 필터링할 수 있습니다.  .copy-offload, .snapshot, ~snapshot 디렉토리는 기본적으로 제외됩니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html#settings["디렉터리 이름 제외 설정에 대해 자세히 알아보세요."] .
+
+
+
+=== 추가 Amazon S3 및 ONTAP S3 스토리지 지원
+
+Cloud Sync 이제 AWS S3 및 ONTAP S3 스토리지에 대한 추가 동기화 관계를 지원합니다.
+
+* AWS S3에서 ONTAP S3 스토리지로
+* ONTAP S3 스토리지에서 AWS S3로
+
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/reference-supported-relationships.html["지원되는 동기화 관계에 대해 자세히 알아보세요."] .
+
+
+
+== 2022년 10월 30일
+
+
+
+=== Microsoft Azure에서 지속적인 동기화
+
+이제 Azure 데이터 브로커를 사용하여 원본 Azure 저장소 버킷에서 클라우드 저장소로의 지속적인 동기화 설정이 지원됩니다.
+
+초기 데이터 동기화 후, Cloud Sync 소스 Azure 스토리지 버킷의 변경 사항을 수신하고 발생하는 모든 변경 사항을 대상에 지속적으로 동기화합니다.  이 설정은 Azure 스토리지 버킷에서 Azure Blob 스토리지, CIFS, Google Cloud Storage, IBM Cloud Object Storage, NFS 및 StorageGRID 로 동기화할 때 사용할 수 있습니다.
+
+Azure 데이터 브로커에는 이 설정을 사용하려면 사용자 지정 역할과 다음 권한이 필요합니다.
+
+[source, json]
+----
+'Microsoft.Storage/storageAccounts/read',
+'Microsoft.EventGrid/systemTopics/eventSubscriptions/write',
+'Microsoft.EventGrid/systemTopics/eventSubscriptions/read',
+'Microsoft.EventGrid/systemTopics/eventSubscriptions/delete',
+'Microsoft.EventGrid/systemTopics/eventSubscriptions/getFullUrl/action',
+'Microsoft.EventGrid/systemTopics/eventSubscriptions/getDeliveryAttributes/action',
+'Microsoft.EventGrid/systemTopics/read',
+'Microsoft.EventGrid/systemTopics/write',
+'Microsoft.EventGrid/systemTopics/delete',
+'Microsoft.EventGrid/eventSubscriptions/write',
+'Microsoft.Storage/storageAccounts/write'
+----
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html#settings["연속 동기화 설정에 대해 자세히 알아보세요"] .
+
+
+
+== 2022년 9월 4일
+
+
+
+=== 추가 Google 드라이브 지원
+
+* Cloud Sync 이제 Google Drive에 대한 추가 동기화 관계를 지원합니다.
++
+** Google Drive에서 NFS 서버로
+** Google Drive에서 SMB 서버로
+
+
+* Google Drive를 포함한 동기화 관계에 대한 보고서를 생성할 수도 있습니다.
++
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-managing-reports.html["보고서에 대해 자세히 알아보세요"] .
+
+
+
+
+
+=== 지속적인 동기화 향상
+
+이제 다음 유형의 동기화 관계에서 지속적인 동기화 설정을 활성화할 수 있습니다.
+
+* S3 버킷에서 NFS 서버로
+* Google Cloud Storage를 NFS 서버로
+
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html#settings["연속 동기화 설정에 대해 자세히 알아보세요"] .
+
+
+
+=== 이메일 알림
+
+이제 이메일로 Cloud Sync 알림을 받을 수 있습니다.
+
+이메일로 알림을 받으려면 동기화 관계에서 *알림* 설정을 활성화한 다음 NetApp 콘솔에서 알림 및 알림 설정을 구성해야 합니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-managing-relationships.html#setting-up-notifications["알림 설정 방법 알아보기"] .
+
+
+
+== 2022년 7월 31일
+
+
+
+=== 구글 드라이브
+
+이제 NFS 서버나 SMB 서버의 데이터를 Google Drive에 동기화할 수 있습니다.  "내 드라이브"와 "공유 드라이브"는 모두 대상으로 지원됩니다.
+
+Google Drive를 포함하는 동기화 관계를 만들려면 먼저 필요한 권한과 개인 키가 있는 서비스 계정을 설정해야 합니다. https://docs.netapp.com/us-en/bluexp-copy-sync/reference-requirements.html#google-drive["Google Drive 요구 사항에 대해 자세히 알아보세요"] .
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/reference-supported-relationships.html["지원되는 동기화 관계 목록 보기"] .
+
+
+
+=== 추가 Azure Data Lake 지원
+
+Cloud Sync 이제 Azure Data Lake Storage Gen2에 대한 추가 동기화 관계를 지원합니다.
+
+* Amazon S3에서 Azure Data Lake Storage Gen2로
+* IBM Cloud Object Storage에서 Azure Data Lake Storage Gen2로
+* StorageGRID 에서 Azure Data Lake Storage Gen2로
+
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/reference-supported-relationships.html["지원되는 동기화 관계 목록 보기"] .
+
+
+
+=== 동기화 관계를 설정하는 새로운 방법
+
+NetApp 콘솔의 시스템 페이지에서 직접 동기화 관계를 설정하는 추가 방법을 추가했습니다.
+
+
+
+==== 드래그 앤 드롭
+
+이제 시스템 페이지에서 한 시스템을 다른 시스템 위로 끌어다 놓아 동기화 관계를 설정할 수 있습니다.
+
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-copy-sync/main/media/screenshot-enable-drag-and-drop.png["NetApp 콘솔의 알림 센터를 보여주는 스크린샷입니다."]
+
+
+
+==== 오른쪽 패널 설정
+
+이제 시스템 페이지에서 시스템을 선택한 다음 오른쪽 패널에서 동기화 옵션을 선택하여 Azure Blob 저장소 또는 Google Cloud Storage에 대한 동기화 관계를 설정할 수 있습니다.
+
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-copy-sync/main/media/screenshot-enable-panel.png["NetApp 콘솔의 알림 센터를 보여주는 스크린샷입니다."]
+
+
+
+== 2022년 7월 3일
+
+
+
+=== Azure Data Lake Storage Gen2 지원
+
+이제 NFS 서버 또는 SMB 서버에서 Azure Data Lake Storage Gen2로 데이터를 동기화할 수 있습니다.
+
+Azure Data Lake를 포함하는 동기화 관계를 만들 때는 Cloud Sync 에 스토리지 계정 연결 문자열을 제공해야 합니다.  SAS(공유 액세스 서명)가 아닌 일반 연결 문자열이어야 합니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/reference-supported-relationships.html["지원되는 동기화 관계 목록 보기"] .
+
+
+
+=== Google Cloud Storage에서 지속적인 동기화
+
+이제 소스 Google Cloud Storage 버킷에서 클라우드 스토리지 대상으로의 연속 동기화 설정이 지원됩니다.
+
+초기 데이터 동기화 후, Cloud Sync 소스 Google Cloud Storage 버킷의 변경 사항을 수신하고 발생하는 모든 변경 사항을 대상에 지속적으로 동기화합니다.  이 설정은 Google Cloud Storage 버킷에서 S3, Google Cloud Storage, Azure Blob Storage, StorageGRID 또는 IBM Storage로 동기화할 때 사용할 수 있습니다.
+
+이 설정을 사용하려면 데이터 브로커에 연결된 서비스 계정에는 다음 권한이 필요합니다.
+
+[source, json]
+----
+- pubsub.subscriptions.consume
+- pubsub.subscriptions.create
+- pubsub.subscriptions.delete
+- pubsub.subscriptions.list
+- pubsub.topics.attachSubscription
+- pubsub.topics.create
+- pubsub.topics.delete
+- pubsub.topics.list
+- pubsub.topics.setIamPolicy
+- storage.buckets.update
+----
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html#settings["연속 동기화 설정에 대해 자세히 알아보세요"] .
+
+
+
+=== 새로운 Google Cloud 지역 지원
+
+Cloud Sync 데이터 브로커는 이제 다음 Google Cloud 지역에서 지원됩니다.
+
+* 콜럼버스(us-east5)
+* 댈러스(us-south1)
+* 마드리드(유럽-남서1)
+* 밀라노(europe-west8)
+* 파리(europe-west9)
+
+
+
+
+=== 새로운 Google Cloud 머신 유형
+
+Google Cloud의 데이터 브로커에 대한 기본 머신 유형은 이제 n2-standard-4입니다.
+
+
+
+== 2022년 6월 6일
+
+
+
+=== 연속 동기화
+
+새로운 설정을 사용하면 소스 S3 버킷의 변경 사항을 대상에 지속적으로 동기화할 수 있습니다.
+
+초기 데이터 동기화 후, Cloud Sync 소스 S3 버킷의 변경 사항을 수신하고 발생하는 모든 변경 사항을 대상에 지속적으로 동기화합니다.  예약된 간격으로 소스를 다시 스캔할 필요가 없습니다.  이 설정은 S3 버킷에서 S3, Google Cloud Storage, Azure Blob Storage, StorageGRID 또는 IBM Storage로 동기화할 때만 사용할 수 있습니다.
+
+이 설정을 사용하려면 데이터 브로커와 연결된 IAM 역할에 다음 권한이 필요합니다.
+
+[source, json]
+----
+"s3:GetBucketNotification",
+"s3:PutBucketNotification"
+----
+이러한 권한은 새로 만든 모든 데이터 브로커에 자동으로 추가됩니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html#settings["연속 동기화 설정에 대해 자세히 알아보세요"] .
+
+
+
+=== 모든 ONTAP 볼륨 표시
+
+동기화 관계를 만들면 이제 Cloud Sync 에서 소스 Cloud Volumes ONTAP 시스템, 온프레미스 ONTAP 클러스터 또는 FSx for ONTAP 파일 시스템의 모든 볼륨이 표시됩니다.
+
+이전에는 Cloud Sync 선택한 프로토콜과 일치하는 볼륨만 표시했습니다.  이제 모든 볼륨이 표시되지만, 선택한 프로토콜과 일치하지 않거나 공유 또는 내보내기가 없는 볼륨은 회색으로 표시되어 선택할 수 없습니다.
+
+
+
+=== Azure Blob에 태그 복사
+
+Azure Blob이 대상인 동기화 관계를 만들면 이제 Cloud Sync 하여 태그를 Azure Blob 컨테이너에 복사할 수 있습니다.
+
+* *설정* 페이지에서 *개체 복사* 설정을 사용하여 소스에서 Azure Blob 컨테이너로 태그를 복사할 수 있습니다.  이는 메타데이터를 복사하는 것에 추가됩니다.
+* *태그/메타데이터* 페이지에서 Azure Blob 컨테이너에 복사되는 개체에 설정할 Blob 인덱스 태그를 지정할 수 있습니다.  이전에는 관계 메타데이터만 지정할 수 있었습니다.
+
+
+이러한 옵션은 Azure Blob이 대상이고 소스가 Azure Blob이거나 S3 호환 엔드포인트(S3, StorageGRID 또는 IBM Cloud Object Storage)인 경우 지원됩니다.
+
+
+
+== 2022년 5월 1일
+
+
+
+=== 동기화 시간 초과
+
+동기화 관계에 대한 새로운 *동기화 시간 초과* 설정을 사용할 수 있습니다.  이 설정을 사용하면 지정된 시간 또는 일 수 동안 동기화가 완료되지 않을 경우 Cloud Sync 데이터 동기화를 취소할지 여부를 정의할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-managing-relationships.html#change-the-settings-for-a-sync-relationship["동기화 관계 설정 변경에 대해 자세히 알아보세요."] .
+
+
+
+=== 알림
+
+동기화 관계에 대한 새로운 *알림* 설정을 사용할 수 있습니다.  이 설정을 사용하면 NetApp 콘솔의 알림 센터에서 Cloud Sync 알림을 받을지 여부를 선택할 수 있습니다.  성공적인 데이터 동기화, 실패한 데이터 동기화, 취소된 데이터 동기화에 대한 알림을 활성화할 수 있습니다.
+
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-copy-sync/main/media/screenshot-notification-center.png["NetApp 콘솔의 알림 센터를 보여주는 스크린샷입니다."]
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-managing-relationships.html#change-the-settings-for-a-sync-relationship["동기화 관계 설정 변경에 대해 자세히 알아보세요."] .
+
+
+
+== 2022년 4월 3일
+
+
+
+=== 데이터 브로커 그룹 개선
+
+데이터 브로커 그룹에 여러 가지 개선 사항을 적용했습니다.
+
+* 이제 데이터 브로커를 새 그룹이나 기존 그룹으로 이동할 수 있습니다.
+* 이제 데이터 브로커의 프록시 구성을 업데이트할 수 있습니다.
+* 마지막으로 데이터 브로커 그룹을 삭제할 수도 있습니다.
+
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-managing-data-brokers.html["데이터 브로커 그룹을 관리하는 방법을 알아보세요"] .
+
+
+
+=== 대시보드 필터
+
+이제 동기화 대시보드의 내용을 필터링하여 특정 상태와 일치하는 동기화 관계를 더 쉽게 찾을 수 있습니다.  예를 들어, 실패 상태인 동기화 관계를 필터링할 수 있습니다.
+
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-copy-sync/main/media/screenshot-sync-filter.png["대시보드 상단의 동기화 상태별 필터링 옵션을 보여주는 스크린샷입니다."]
+
+
+
+== 2022년 3월 3일
+
+
+
+=== 대시보드에서 정렬
+
+이제 대시보드를 동기화 관계 이름별로 정렬합니다.
+
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-copy-sync/main/media/screenshot-sync-sort.png["대시보드에서 사용할 수 있는 이름별 정렬 옵션을 보여주는 스크린샷입니다."]
+
+
+
+=== 데이터 감지 통합 향상
+
+이전 릴리스에서는 Cloud Data Sense와 Cloud Sync 통합을 도입했습니다.  이번 업데이트에서는 동기화 관계를 더 쉽게 만들 수 있도록 통합을 강화했습니다.  Cloud Data Sense에서 데이터 동기화를 시작하면 모든 소스 정보가 단일 단계에 포함되므로 몇 가지 주요 세부 정보만 입력하면 됩니다.
+
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-copy-sync/main/media/screenshot-sync-data-sense.png["Cloud Data Sense에서 직접 새 동기화를 시작한 후 나타나는 Data Sense 통합 페이지를 보여주는 스크린샷입니다."]
+
+
+
+== 2022년 2월 6일
+
+
+
+=== 데이터 브로커 그룹 강화
+
+데이터 브로커 그룹을 강조하여 데이터 브로커와의 상호 작용 방식을 변경했습니다.
+
+예를 들어, 새로운 동기화 관계를 만들 때 특정 데이터 브로커를 선택하는 대신, 관계에 사용할 데이터 브로커 _그룹_을 선택합니다.
+
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-copy-sync/main/media/screenshot-sync-select-data-broker-group.png["데이터 브로커 그룹 선택을 보여주는 동기화 관계 마법사의 스크린샷입니다."]
+
+*데이터 브로커 관리* 탭에서는 데이터 브로커 그룹이 관리하는 동기화 관계의 수도 표시됩니다.
+
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-copy-sync/main/media/screenshot-sync-group-relationships.png["데이터 브로커 그룹과 해당 그룹에 대한 세부 정보(관리 중인 관계 수 포함)를 보여주는 데이터 브로커 관리 페이지의 스크린샷입니다."]
+
+
+
+=== PDF 보고서 다운로드
+
+이제 보고서 PDF를 다운로드할 수 있습니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-managing-reports.html["보고서에 대해 자세히 알아보세요"] .
+
+
+
+== 2022년 1월 2일
+
+
+
+=== 새로운 Box 동기화 관계
+
+두 가지 새로운 동기화 관계가 지원됩니다.
+
+* Box에서 Azure NetApp Files
+* ONTAP 용 Amazon FSx 로 박스 전송
+
+
+link:reference-supported-relationships.html["지원되는 동기화 관계 목록 보기"] .
+
+
+
+=== 관계 이름
+
+이제 각 동기화 관계에 의미 있는 이름을 지정하여 각 관계의 목적을 더 쉽게 식별할 수 있습니다.  관계를 생성할 때 이름을 추가할 수 있으며, 이후 언제든지 추가할 수 있습니다.
+
+image:screenshot-sync-relationship-edit-name.png["관계 이름 옆에 있는 편집 버튼을 보여주는 동기화 관계의 스크린샷입니다."]
+
+
+
+=== S3 개인 링크
+
+Amazon S3에서 데이터를 동기화할 때 S3 개인 링크를 사용할지 여부를 선택할 수 있습니다.  데이터 브로커가 소스에서 타겟으로 데이터를 복사할 때는 개인 링크를 거칩니다.
+
+이 기능을 사용하려면 데이터 브로커와 연결된 IAM 역할에 다음과 같은 권한이 필요합니다.
+
+[source, json]
+----
+"ec2:DescribeVpcEndpoints"
+----
+이 권한은 새로 만든 모든 데이터 브로커에 자동으로 추가됩니다.
+
+
+
+=== 빙하 즉시 검색
+
+이제 Amazon S3가 동기화 관계의 대상인 경우 _Glacier Instant Retrieval_ 스토리지 클래스를 선택할 수 있습니다.
+
+
+
+=== 개체 스토리지에서 SMB 공유로의 ACL
+
+이제 Cloud Sync 개체 스토리지의 ACL을 SMB 공유로 복사하는 기능을 지원합니다.  이전에는 SMB 공유에서 개체 스토리지로 ACL을 복사하는 것만 지원했습니다.
+
+
+
+=== SFTP에서 S3로
+
+SFTP에서 Amazon S3로 동기화 관계를 만드는 기능이 이제 사용자 인터페이스에서 지원됩니다.  이 동기화 관계는 이전에는 API로만 지원되었습니다.
+
+
+
+=== 테이블 뷰 향상
+
+대시보드의 테이블 보기를 사용 편의성을 위해 새롭게 디자인했습니다.  *추가 정보*를 선택하면 Cloud Sync 대시보드를 필터링하여 해당 관계에 대한 자세한 정보를 표시합니다.
+
+image:screenshot-sync-table.png["대시보드의 테이블 뷰 스크린샷."]
+
+
+
+=== 자카르타 지역 지원
+
+이제 Cloud Sync AWS 아시아 태평양(자카르타) 지역에 데이터 브로커를 배포하는 것을 지원합니다.
+
+
+
+== 2021년 11월 28일
+
+
+
+=== SMB에서 개체 스토리지로의 ACL
+
+이제 Cloud Sync 소스 SMB 공유에서 개체 스토리지로 동기화 관계를 설정할 때 액세스 제어 목록(ACL)을 복사할 수 있습니다( ONTAP S3 제외).
+
+Cloud Sync 개체 스토리지에서 SMB 공유로 ACL을 복사하는 것을 지원하지 않습니다.
+
+link:task-copying-acls.html["SMB 공유에서 ACL을 복사하는 방법을 알아보세요"] .
+
+
+
+=== 라이센스 업데이트
+
+이제 연장한 Cloud Sync 라이선스를 업데이트할 수 있습니다.
+
+NetApp 에서 구매한 Cloud Sync 라이선스를 연장한 경우 라이선스를 다시 추가하여 만료 날짜를 새로 고칠 수 있습니다.
+
+link:task-licensing.html["라이센스를 업데이트하는 방법을 알아보세요"] .
+
+
+
+=== Box 자격 증명 업데이트
+
+이제 기존 동기화 관계에 대한 Box 자격 증명을 업데이트할 수 있습니다.
+
+link:task-managing-relationships.html["자격 증명을 업데이트하는 방법을 알아보세요"] .
+
+
+
+== 2021년 10월 31일
+
+
+
+=== 박스 지지대
+
+Box 지원은 이제 Cloud Sync 사용자 인터페이스에서 미리 보기로 제공됩니다.
+
+상자는 여러 유형의 동기화 관계에서 소스 또는 대상이 될 수 있습니다. link:reference-supported-relationships.html["지원되는 동기화 관계 목록 보기"] .
+
+
+
+=== 생성 날짜 설정
+
+SMB 서버가 소스인 경우 _생성 날짜_라는 새로운 동기화 관계 설정을 사용하면 특정 날짜 이후, 특정 날짜 이전 또는 특정 기간 사이에 생성된 파일을 동기화할 수 있습니다.
+
+link:task-managing-relationships.html["Cloud Sync 설정에 대해 자세히 알아보세요"] .
+
+
+
+== 2021년 10월 4일
+
+
+
+=== 추가 Box 지원
+
+Cloud Sync 이제 추가 동기화 관계를 지원합니다. https://www.box.com/home["상자"^] Cloud Sync API를 사용할 때:
+
+* Amazon S3에서 Box로
+* IBM Cloud Object Storage에서 Box로
+* StorageGRID 에서 Box로
+* NFS 서버로의 박스
+* SMB 서버로의 박스
+
+
+link:api-sync.html["API를 사용하여 동기화 관계를 설정하는 방법을 알아보세요."] .
+
+
+
+=== SFTP 경로에 대한 보고서
+
+이제 할 수 있습니다link:task-managing-reports.html["보고서를 만들다"] SFTP 경로의 경우.
+
+
+
+== 2021년 9월 2일
+
+
+
+=== ONTAP 용 FSx 지원
+
+이제 Amazon FSx for ONTAP 파일 시스템에서 데이터를 동기화할 수 있습니다.
+
+* https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/concept-fsx-aws.html["Amazon FSx for ONTAP 에 대해 알아보세요"^]
+* link:reference-requirements.html["지원되는 동기화 관계 보기"]
+* link:task-creating-relationships.html["Amazon FSx for ONTAP 에 대한 동기화 관계를 만드는 방법을 알아보세요."]
+
+
+
+
+== 2021년 8월 1일
+
+
+
+=== 자격 증명 업데이트
+
+이제 Cloud Sync 사용하면 기존 동기화 관계의 소스 또는 대상의 최신 자격 증명으로 데이터 브로커를 업데이트할 수 있습니다.
+
+보안 정책에 따라 주기적으로 자격 증명을 업데이트해야 하는 경우 이러한 향상 기능이 도움이 될 수 있습니다. link:task-managing-relationships.html["자격 증명을 업데이트하는 방법을 알아보세요"] .
+
+image:screenshot_sync_update_credentials.png["소스 또는 대상 이름 바로 아래에 있는 동기화 관계 페이지에서 자격 증명 업데이트 옵션을 보여주는 스크린샷입니다."]
+
+
+
+=== 객체 스토리지 대상에 대한 태그
+
+동기화 관계를 생성할 때 이제 동기화 관계의 개체 스토리지 대상에 태그를 추가할 수 있습니다.
+
+태그 추가는 Amazon S3, Azure Blob, Google Cloud Storage, IBM Cloud Object Storage 및 StorageGRID 에서 지원됩니다.
+
+image:screenshot_sync_tags.png["관계에서 개체 저장소 대상에 관계 태그를 추가할 수 있는 시스템 마법사의 페이지를 보여주는 스크린샷입니다."]
+
+
+
+=== Box 지원
+
+이제 Cloud Sync 지원됩니다. https://www.box.com/home["상자"^] Cloud Sync API를 사용할 때 Amazon S3, StorageGRID 및 IBM Cloud Object Storage에 대한 동기화 관계의 소스로 사용됩니다.
+
+link:api-sync.html["API를 사용하여 동기화 관계를 설정하는 방법을 알아보세요."] .
+
+
+
+=== Google Cloud의 데이터 브로커를 위한 공용 IP
+
+Google Cloud에 데이터 브로커를 배포할 때 이제 가상 머신 인스턴스에 대한 공용 IP 주소를 활성화할지 비활성화할지 선택할 수 있습니다.
+
+link:task-installing-gcp.html["Google Cloud에서 데이터 브로커를 배포하는 방법을 알아보세요."] .
+
+
+
+=== Azure NetApp Files 용 이중 프로토콜 볼륨
+
+Azure NetApp Files 대한 소스 또는 대상 볼륨을 선택하면 이제 Cloud Sync 동기화 관계에 대해 선택한 프로토콜에 관계없이 이중 프로토콜 볼륨이 표시됩니다.
+
+
+
+== 2021년 7월 7일
+
+
+
+=== ONTAP S3 스토리지 및 Google Cloud Storage
+
+Cloud Sync 이제 사용자 인터페이스에서 ONTAP S3 Storage와 Google Cloud Storage 버킷 간의 동기화 관계를 지원합니다.
+
+link:reference-supported-relationships.html["지원되는 동기화 관계 목록 보기"] .
+
+
+
+=== 객체 메타데이터 태그
+
+이제 동기화 관계를 생성하고 설정을 활성화하면 Cloud Sync 개체 기반 저장소 간에 개체 메타데이터와 태그를 복사할 수 있습니다.
+
+link:task-creating-relationships.html#settings["개체 복사 설정에 대해 자세히 알아보세요"] .
+
+
+
+=== HashiCorp Vault 지원
+
+이제 Google Cloud 서비스 계정으로 인증하여 외부 HashiCorp Vault에서 자격 증명에 액세스하도록 데이터 브로커를 설정할 수 있습니다.
+
+link:task-external-vault.html["데이터 브로커와 함께 HashiCorp Vault를 사용하는 방법에 대해 자세히 알아보세요."] .
+
+
+
+=== S3 버킷에 대한 태그 또는 메타데이터 정의
+
+Amazon S3 버킷에 대한 동기화 관계를 설정할 때 이제 동기화 관계 마법사를 사용하여 대상 S3 버킷의 객체에 저장하려는 태그나 메타데이터를 정의할 수 있습니다.
+
+태그 지정 옵션은 이전에는 동기화 관계 설정의 일부였습니다.
+
+
+
+== 2021년 6월 7일
+
+
+
+=== Google Cloud의 스토리지 클래스
+
+Google Cloud Storage 버킷이 동기화 관계의 대상인 경우 이제 사용할 스토리지 클래스를 선택할 수 있습니다.  Cloud Sync 다음과 같은 스토리지 클래스를 지원합니다.
+
+* 기준
+* 니어라인
+* 콜드라인
+* 보관소
+
+
+
+
+== 2021년 5월 2일
+
+
+
+=== 보고서의 오류
+
+이제 보고서에서 발견된 오류를 볼 수 있으며 마지막 보고서나 모든 보고서를 삭제할 수 있습니다.
+
+link:task-managing-reports.html["구성을 조정하기 위한 보고서 생성 및 보기에 대해 자세히 알아보세요."] .
+
+
+
+=== 속성 비교
+
+이제 각 동기화 관계에 대해 새로운 *비교 기준* 설정을 사용할 수 있습니다.
+
+이 고급 설정을 사용하면 Cloud Sync 파일이나 디렉토리가 변경되어 다시 동기화해야 하는지 여부를 결정할 때 특정 속성을 비교해야 하는지 여부를 선택할 수 있습니다.
+
+link:task-managing-relationships.html#change-the-settings-for-a-sync-relationship["동기화 관계 설정 변경에 대해 자세히 알아보세요."] .
+
+
+
+== 2021년 4월 11일
+
+
+
+=== 독립형 Cloud Sync 서비스가 중단되었습니다.
+
+독립형 Cloud Sync 서비스는 중단되었습니다.  이제 NetApp 콘솔에서 직접 Cloud Sync 에 액세스할 수 있으며, 모든 동일한 기능을 사용할 수 있습니다.
+
+NetApp 콘솔에 로그인한 후 상단의 동기화 탭으로 전환하여 이전과 마찬가지로 관계를 볼 수 있습니다.
+
+
+
+=== 다양한 프로젝트의 Google Cloud 버킷
+
+동기화 관계를 설정할 때 데이터 브로커의 서비스 계정에 필요한 권한을 제공하는 경우 다양한 프로젝트의 Google Cloud 버킷에서 선택할 수 있습니다.
+
+link:task-installing-gcp.html["서비스 계정을 설정하는 방법을 알아보세요"] .
+
+
+
+=== Google Cloud Storage와 S3 간의 메타데이터
+
+이제 Cloud Sync Google Cloud Storage와 S3 공급업체(AWS S3, StorageGRID, IBM Cloud Object Storage) 간에 메타데이터를 복사합니다.
+
+
+
+=== 데이터 브로커 재시작
+
+이제 Cloud Sync 에서 데이터 브로커를 다시 시작할 수 있습니다.
+
+image:screenshot_sync_restart_data_broker.gif["데이터 브로커 관리 페이지에서 데이터 브로커 재시작 작업을 보여주는 스크린샷입니다."]
+
+
+
+=== 최신 릴리스를 실행하지 않을 때의 메시지
+
+이제 Cloud Sync 데이터 브로커가 최신 소프트웨어 릴리스를 실행하지 않는 경우를 식별합니다.  이 메시지는 귀하가 최신 기능을 사용하고 있는지 확인하는 데 도움이 될 수 있습니다.
+
+image:screenshot_sync_warning.gif["대시보드에서 데이터 브로커를 볼 때 경고를 보여주는 스크린샷입니다."]

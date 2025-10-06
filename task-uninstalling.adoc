@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: task-uninstalling.html 
+keywords: uninstall, uninstall data broker, remove data broker 
+summary: 필요한 경우 제거 스크립트를 실행하여 데이터 브로커와 데이터 브로커가 설치될 때 생성된 패키지 및 디렉터리를 제거합니다. 
+---
+= NetApp Copy and Sync용 데이터 브로커 제거
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+필요한 경우 제거 스크립트를 실행하여 데이터 브로커와 NetApp Copy and Sync에 대해 데이터 브로커가 설치될 때 생성된 패키지 및 디렉터리를 제거합니다.
+
+.단계
+. 데이터 브로커 호스트에 로그인합니다.
+. 데이터 브로커 디렉토리로 변경: `/opt/netapp/databroker`
+. 다음 명령을 실행하세요.
++
+`chmod +x uninstaller-DataBroker.sh`
+`./uninstaller-DataBroker.sh`
+
+. 'y'를 눌러 제거를 확인하세요.
+

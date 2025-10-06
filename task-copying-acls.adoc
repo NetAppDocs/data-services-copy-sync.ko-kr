@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: task-copying-acls.html 
+keywords: permissions, access control list, acls, ntfs, cifs, smb, shares, robocopy, copy, transfer, activate, operating system, os, ram, cpu, networking, copy acls to the target 
+summary: 'NetApp Copy and Sync는 SMB 공유 간, 그리고 SMB 공유와 개체 스토리지( ONTAP S3 제외) 간에 액세스 제어 목록(ACL)을 복사할 수 있습니다.  필요한 경우 robocopy를 사용하여 SMB 공유 간 ACL을 수동으로 보존할 수도 있습니다.' 
+---
+= NetApp Copy and Sync에서 SMB 공유의 ACL 복사
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Copy and Sync는 SMB 공유 간, 그리고 SMB 공유와 개체 스토리지( ONTAP S3 제외) 간에 액세스 제어 목록(ACL)을 복사할 수 있습니다.  필요한 경우 robocopy를 사용하여 SMB 공유 간 ACL을 수동으로 보존할 수도 있습니다.
+
+.선택
+* <<ACL을 복사하기 위한 복사 및 동기화 설정,ACL을 자동으로 복사하도록 복사 및 동기화 설정>>
+* <<SMB 공유 간 ACL을 수동으로 복사합니다.,SMB 공유 간 ACL을 수동으로 복사합니다.>>
+
+
+
+
+== ACL을 복사하기 위한 복사 및 동기화 설정
+
+관계를 생성할 때 또는 관계를 생성한 후에 설정을 활성화하여 SMB 공유 간, 그리고 SMB 공유와 개체 스토리지 간에 ACL을 복사합니다.
+
+.시작하기 전에
+이 기능은 AWS, Azure, Google Cloud Platform 또는 온프레미스 데이터 브로커 등 _모든_ 유형의 데이터 브로커에서 작동합니다.  온프레미스 데이터 브로커는 다음을 실행할 수 있습니다.link:task-installing-linux.html["지원되는 모든 운영 체제"] .
+
+.새로운 관계를 위한 단계
+. link:task-login-copyandsync.html["복사 및 동기화에 로그인하세요"] .
+. 복사 및 동기화에서 *새 동기화 만들기*를 선택합니다.
+. 소스로 SMB 서버 또는 개체 스토리지를 끌어다 놓고, 대상으로 SMB 서버 또는 개체 스토리지를 끌어다 놓은 다음 *계속*을 선택합니다.
+. *SMB 서버* 페이지에서:
++
+.. 새로운 SMB 서버를 입력하거나 기존 서버를 선택하고 *계속*을 선택하세요.
+.. SMB 서버에 대한 자격 증명을 입력하세요.
+.. *파일만 복사*, *ACL만 복사*, *파일 및 ACL 복사* 중 하나를 선택하고 *계속*을 선택합니다.
++
+image:screenshot_acl_support.png["대상에 액세스 제어 목록 복사를 활성화하는 옵션을 보여주는 스크린샷입니다."]
+
+
+
+. 나머지 메시지에 따라 동기화 관계를 만듭니다.
++
+SMB에서 개체 스토리지로 ACL을 복사할 때 대상에 따라 ACL을 개체의 태그나 개체의 메타데이터에 복사할 수 있습니다.  Azure 및 Google Cloud Storage의 경우 메타데이터 옵션만 사용할 수 있습니다.
+
++
+다음 스크린샷은 이러한 선택을 할 수 있는 단계의 예를 보여줍니다.
+
++
+image:screenshot-sync-tags-metadata.png["개체 스토리지에 복사할 때 동기화 관계 마법사의 여섯 번째 단계에 대한 스크린샷입니다.  ACL을 개체의 태그나 메타데이터에 저장할 수 있습니다."]
+
+
+
+.기존 관계에 대한 단계
+. 동기화 관계 위에 마우스를 올려놓고 작업 메뉴를 선택하세요.
+. *설정*을 선택하세요.
+. *파일만 복사*, *ACL만 복사*, *파일 및 ACL 복사* 중 하나를 선택하고 *계속*을 선택합니다.
+. *설정 저장*을 선택하세요.
+
+
+.결과
+데이터를 동기화할 때, 복사 및 동기화는 소스와 대상 간의 ACL을 보존합니다.
+
+
+
+== SMB 공유 간 ACL을 수동으로 복사합니다.
+
+Windows robocopy 명령을 사용하면 SMB 공유 간의 ACL을 수동으로 보존할 수 있습니다.
+
+.단계
+. 두 SMB 공유에 대한 전체 액세스 권한이 있는 Windows 호스트를 식별합니다.
+. 두 엔드포인트 중 하나에 인증이 필요한 경우 *net use* 명령을 사용하여 Windows 호스트에서 엔드포인트에 연결합니다.
++
+Robocopy를 사용하기 전에 이 단계를 수행해야 합니다.
+
+. 복사 및 동기화에서 소스 및 대상 SMB 공유 간에 새 관계를 만들거나 기존 관계를 동기화합니다.
+. 데이터 동기화가 완료되면 Windows 호스트에서 다음 명령을 실행하여 ACL과 소유권을 동기화합니다.
++
+ robocopy /E /COPY:SOU /secfix [source] [target] /w:0 /r:0 /XD ~snapshots /UNILOG:”[logfilepath]
++
+_source_와 _target_은 모두 UNC 형식을 사용하여 지정해야 합니다.  예: \\<서버>\<공유>\<경로>
+
+

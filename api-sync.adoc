@@ -1,0 +1,190 @@
+---
+sidebar: sidebar 
+permalink: api-sync.html 
+keywords: api, apis, rest, restful, authorization, getting started, body, header, token, reference, expired token, expires, expired, token expired, list apis, 202, https status code 202, status code 202, id, id field, box 
+summary: 웹 UI를 통해 제공되는 NetApp 복사 및 동기화 기능은 RESTful API를 통해서도 사용할 수 있습니다. 
+---
+= NetApp 복사 및 동기화 API
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+웹 UI를 통해 제공되는 NetApp 복사 및 동기화 기능은 RESTful API를 통해서도 사용할 수 있습니다.
+
+
+
+== 시작하기
+
+Copy and Sync API를 시작하려면 사용자 토큰과 NetApp 콘솔 계정 ID를 얻어야 합니다.  API 호출을 할 때 Authorization 헤더에 토큰과 계정 ID를 추가해야 합니다.
+
+.단계
+. NetApp 콘솔에서 사용자 토큰을 얻습니다.
++
+[source, http]
+----
+POST https://netapp-cloud-account.auth0.com/oauth/token
+Header: Content-Type: application/json
+Body:
+{
+              "username": "<user_email>",
+              "scope": "profile",
+              "audience": "https://api.cloud.netapp.com",
+              "client_id": "UaVhOIXMWQs5i1WdDxauXe5Mqkb34NJQ",
+              "grant_type": "password",
+              "password": "<user_password>"
+}
+----
++
+
+NOTE: 클라이언트 ID가 없는 개인 이메일 계정을 사용하는 경우 기본 클라이언트 ID "QC3AgHk6qdbmC7Yyr82ApBwaaJLwRrNO”를 사용할 수 있습니다.
+
+. NetApp 콘솔 계정 ID를 얻으세요.
++
+[source, http]
+----
+GET https://api.cloudsync.netapp.com/api/accounts
+Headers: Authorization: Bearer <user_token>
+Content-Type: application/json
+----
++
+이 API는 다음과 같은 응답을 반환합니다.
+
++
+[source, json]
+----
+[
+  {
+    "accountId": "account-JeL97Ry3",
+    "name": "Test"
+  }
+]
+----
+. 각 API 호출의 Authorization 헤더에 사용자 토큰과 계정 ID를 추가합니다.
++
+*예*
+
++
+다음 예제에서는 Microsoft Azure에서 데이터 브로커를 만드는 API 호출을 보여줍니다.  <user_token>과 <accountId>를 이전 단계에서 얻은 토큰과 ID로 바꾸기만 하면 됩니다.
+
++
+[source, http]
+----
+POST https://api.cloudsync.netapp.com/api/data-brokers
+Headers: Authorization: Bearer <user_token>
+Content-Type: application/json
+x-account-id: <accountId>
+Body: { "name": "databroker1", "type": "AZURE" }
+----
+
+
+.다음은 무엇인가요?
+NetApp 콘솔의 사용자 토큰에는 만료 날짜가 있습니다.  토큰을 새로 고치려면 1단계의 API를 다시 호출해야 합니다.
+
+API 응답에는 토큰이 만료되는 시점을 나타내는 "expires_in" 필드가 포함되어 있습니다.
+
+
+
+== 목록 API 사용
+
+목록 API는 비동기 API이므로 결과가 즉시 반환되지 않습니다(예: `GET /data-brokers/{id}/list-nfs-export-folders` 그리고 `GET /data-brokers/{id}/list-s3-buckets` ).  서버에서 보내는 유일한 응답은 HTTP 상태 202입니다.  실제 결과를 얻으려면 다음을 사용해야 합니다. `GET /messages/client` API.
+
+.단계
+. 사용하려는 목록 API를 호출합니다.
+. 사용하다 `GET /messages/client` 작업 결과를 볼 수 있는 API입니다.
+. 방금 받은 ID를 추가하여 동일한 API를 사용하세요. `GET \http://api.cloudsync.netapp.com/api/messages/client?last=<id_from_step_2>`
++
+ID는 호출할 때마다 변경됩니다. `GET /messages/client` API.
+
+
+
+*예*
+
+당신이 전화할 때 `list-s3-buckets` API, 결과가 즉시 반환되지 않습니다.
+
+[source, http]
+----
+GET http://api.cloudsync.netapp.com/api/data-brokers/<data-broker-id>/list-s3-buckets
+Headers: Authorization: Bearer <user_token>
+Content-Type: application/json
+x-account-id: <accountId>
+----
+결과는 HTTP 상태 코드 202입니다. 이는 메시지가 수락되었지만 아직 처리되지 않았음을 의미합니다.
+
+작업 결과를 얻으려면 다음 API를 사용해야 합니다.
+
+[source, http]
+----
+GET http://api.cloudsync.netapp.com/api/messages/client
+Headers: Authorization: Bearer <user_token>
+Content-Type: application/json
+x-account-id: <accountId>
+----
+결과는 ID 필드를 포함하는 하나의 객체가 있는 배열입니다.  ID 필드는 서버가 보낸 마지막 메시지를 나타냅니다. 예를 들어:
+
+[source, json]
+----
+[
+    {
+        "header": {
+            "requestId": "init",
+            "clientId": "init",
+            "agentId": "init"
+        },
+        "payload": {
+            "init": {}
+        },
+        "id": "5801"
+    }
+]
+----
+이제 방금 받은 ID를 사용하여 다음 API 호출을 수행합니다.
+
+[source, http]
+----
+GET http://api.cloudsync.netapp.com/api/messages/client?last=<id_from_step_2>
+Headers: Authorization: Bearer <user_token>
+Content-Type: application/json
+x-account-id: <accountId>
+----
+그 결과, 일련의 메시지가 생성됩니다.  각 메시지 내부에는 작업 이름(키)과 결과(값)로 구성된 페이로드 객체가 있습니다. 예를 들어:
+
+[source, json]
+----
+[
+    {
+        "payload": {
+            "list-s3-buckets": [
+                {
+                    "tags": [
+                        {
+                            "Value": "100$",
+                            "Key": "price"
+                        }
+                    ],
+                    "region": {
+                        "displayName": "US West (Oregon)",
+                        "name": "us-west-2"
+                    },
+                    "name": "small"
+                }
+            ]
+        },
+        "header": {
+            "requestId": "f687ac55-2f0c-40e3-9fa6-57fb8c4094a3",
+            "clientId": "5beb032f548e6e35f4ed1ba9",
+            "agentId": "5bed61f4489fb04e34a9aac6"
+        },
+        "id": "5802"
+    }
+]
+----
+
+
+== API 참조
+
+각 복사 및 동기화 API에 대한 설명서는 다음에서 제공됩니다. https://api.cloudsync.netapp.com/docs[] .

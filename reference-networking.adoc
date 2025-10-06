@@ -1,0 +1,123 @@
+---
+sidebar: sidebar 
+permalink: reference-networking.html 
+keywords: networking, 443, port, ports, port 443, connections, connectivity, path, paths, vpn, copy and sync, netapp, bluexp, cloud sync,connectivity,data broker 
+summary: NetApp Copy and Sync를 위한 네트워킹에는 데이터 브로커 그룹과 소스 및 대상 위치 간의 연결, 그리고 포트 443을 통한 데이터 브로커의 아웃바운드 인터넷 연결이 포함됩니다. 
+---
+= NetApp Copy and Sync에 대한 네트워킹 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Copy and Sync를 위한 네트워킹에는 데이터 브로커 그룹과 소스 및 대상 위치 간의 연결, 그리고 포트 443을 통한 데이터 브로커의 아웃바운드 인터넷 연결이 포함됩니다.
+
+
+
+== 데이터 브로커 위치
+
+데이터 브로커 그룹은 클라우드나 회사 내부에 설치된 하나 이상의 데이터 브로커로 구성됩니다.
+
+
+
+=== 클라우드의 데이터 브로커
+
+다음 이미지는 AWS, Google Cloud 또는 Azure의 클라우드에서 실행되는 데이터 브로커를 보여줍니다.  데이터 브로커에 연결되어 있는 한 소스와 타겟은 어느 위치에나 있을 수 있습니다.  예를 들어, 데이터 센터에서 클라우드 제공업체로 VPN 연결이 있을 수 있습니다.
+
+
+NOTE: Copy and Sync가 AWS, Azure 또는 Google Cloud에 데이터 브로커를 배포하는 경우, 필요한 아웃바운드 통신을 지원하는 보안 그룹을 생성합니다.
+
+image:diagram_networking_cloud2.png["클라우드에서 실행되는 데이터 브로커인 복사 및 동기화와 소스 및 대상에 대한 연결을 보여주는 다이어그램입니다."]
+
+
+
+=== 귀사 구내의 데이터 브로커
+
+다음 이미지는 데이터 센터에서 온프레미스로 실행되는 데이터 브로커를 보여줍니다.  다시 말해, 소스와 타겟은 데이터 브로커에 연결되어 있는 한 어느 위치에나 있을 수 있습니다.
+
+image:diagram_networking_onprem.png["복사 및 동기화, 온프레미스에서 실행되는 데이터 브로커, 소스 및 대상에 대한 연결을 보여주는 다이어그램입니다."]
+
+
+
+== 네트워킹 요구 사항
+
+* 소스와 대상은 데이터 브로커 그룹에 네트워크로 연결되어 있어야 합니다.
++
+예를 들어, NFS 서버가 데이터 센터에 있고 데이터 브로커가 AWS에 있는 경우 네트워크에서 VPC로의 네트워크 연결(VPN 또는 직접 연결)이 필요합니다.
+
+* 데이터 브로커는 포트 443을 통해 복사 및 동기화 작업을 폴링할 수 있도록 아웃바운드 인터넷 연결이 필요합니다.
+* NetApp 소스, 대상 및 데이터 브로커를 구성하여 NTP(네트워크 시간 프로토콜) 서비스를 사용할 것을 권장합니다.  세 가지 구성 요소 간의 시간 차이는 5분을 초과해서는 안 됩니다.
+
+
+
+
+== 네트워킹 엔드포인트
+
+NetApp 데이터 브로커는 Copy and Sync와 통신하고 몇몇 다른 서비스와 저장소에 접속하기 위해 포트 443을 통한 아웃바운드 인터넷 액세스가 필요합니다.  특정 작업을 수행하려면 로컬 웹 브라우저에서도 엔드포인트에 액세스해야 합니다.  아웃바운드 연결을 제한해야 하는 경우 아웃바운드 트래픽에 대한 방화벽을 구성할 때 다음 엔드포인트 목록을 참조하세요.
+
+
+
+=== 데이터 브로커 엔드포인트
+
+데이터 브로커는 다음 엔드포인트에 접속합니다.
+
+[cols="38,62"]
+|===
+| 엔드포인트 | 목적 
+
+
+| \ https://olcentgbl.trafficmanager.net | 데이터 브로커 호스트에 대한 CentOS 패키지를 업데이트하기 위해 저장소에 문의합니다.  이 엔드포인트는 CentOS 호스트에 데이터 브로커를 수동으로 설치하는 경우에만 접속됩니다. 
+
+
+| \ https://rpm.nodesource.com \ https://registry.npmjs.org \ https://nodejs.org: | 개발에 사용되는 Node.js, npm 및 기타 타사 패키지를 업데이트하기 위해 저장소에 문의합니다. 
+
+
+| \ https://tgz.pm2.io | 복사 및 동기화를 모니터링하는 데 사용되는 타사 패키지인 PM2를 업데이트하기 위한 저장소에 액세스합니다. 
+
+
+| \ https://sqs.us-east-1.amazonaws.com \ https://kinesis.us-east-1.amazonaws.com | Copy and Sync가 작업(파일 대기, 작업 등록, 데이터 브로커에 업데이트 전달)에 사용하는 AWS 서비스에 문의합니다. 
+
+
+| \ https://s3._region_.amazonaws.com 예: s3.us-east-2.amazonaws.com:443https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region["S3 엔드포인트 목록은 AWS 설명서를 참조하세요."^] | 동기화 관계에 S3 버킷이 포함된 경우 Amazon S3에 연락합니다. 
+
+
+| \ https://s3.amazonaws.com/ | Copy and Sync에서 데이터 브로커 로그를 다운로드하면 데이터 브로커가 로그 디렉토리를 압축하고 해당 로그를 us-east-1 지역의 미리 정의된 S3 버킷에 업로드합니다. 
+
+
+| \ https://storage.googleapis.com/ | 동기화 관계에서 GCP 버킷을 사용하는 경우 Google Cloud에 문의합니다. 
+
+
+| https://_storage-account_.blob.core.windows.net[]Azure Data Lake Gen2를 사용하는 경우:https://_storage-account_.dfs.core.windows.net[] 여기서 _storage-account_는 사용자의 소스 저장소 계정입니다. | 사용자의 Azure 스토리지 계정 주소에 대한 프록시를 엽니다. 
+
+
+| \ https://cf.cloudsync.netapp.com \ https://repo.cloudsync.netapp.com | Copy and Sync에 문의하세요. 
+
+
+| \ https://support.netapp.com | 동기화 관계에 BYOL 라이선스를 사용하는 경우 NetApp 지원팀에 문의하세요. 
+
+
+| \ https://fedoraproject.org | 설치 및 업데이트 중에 데이터 브로커 가상 머신에 7z를 설치합니다.  NetApp 기술 지원팀에 AutoSupport 메시지를 보내려면 7z가 필요합니다. 
+
+
+| \ https://sts.amazonaws.com \ https://sts.us-east-1.amazonaws.com | 데이터 브로커가 AWS에 배포되거나 사내에 배포되고 AWS 자격 증명이 제공되는 경우 AWS 자격 증명을 확인합니다.  데이터 브로커는 배포 중, 업데이트 시, 재시작 시 이 엔드포인트에 접속합니다. 
+
+
+| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com | 새로운 동기화 관계에 대한 소스 파일을 선택하기 위해 분류를 사용하는 경우 NetApp 데이터 분류에 문의하세요. 
+
+
+| \ https://pubsub.googleapis.com | Google 스토리지 계정에서 지속적인 동기화 관계를 만드는 경우. 
+
+
+| https://_storage-account_.queue.core.windows.net[]\ https://management.azure.com/subscriptions/ ${_subscriptionId_} /resourceGroups/${_resourceGroup_}/providers/Microsoft.EventGrid/* 여기서 _storage-account_는 사용자의 원본 저장소 계정이고, _subscriptionid_는 원본 구독 ID이고, _resourceGroup_은 원본 리소스 그룹입니다. | Azure Storage 계정에서 지속적인 동기화 관계를 만드는 경우. 
+|===
+
+
+=== 웹 브라우저 엔드포인트
+
+문제 해결을 위해 로그를 다운로드하려면 웹 브라우저가 다음 엔드포인트에 액세스해야 합니다.
+
+logs.cloudsync.netapp.com:443

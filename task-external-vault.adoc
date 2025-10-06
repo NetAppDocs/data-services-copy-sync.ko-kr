@@ -1,0 +1,268 @@
+---
+sidebar: sidebar 
+permalink: task-external-vault.html 
+keywords: hashicorp, vault, credentials, secrets, API 
+summary: Amazon S3, Azure 또는 Google Cloud 자격 증명이 필요한 동기화 관계를 만드는 경우 NetApp Copy and Sync 사용자 인터페이스 또는 API를 통해 해당 자격 증명을 지정해야 합니다.  또 다른 방법은 데이터 브로커를 설정하여 외부 HashiCorp Vault에서 직접 자격 증명에 액세스하는 것입니다. 
+---
+= NetApp Copy and Sync에서 외부 HashiCorp Vault를 사용하도록 데이터 브로커 그룹 설정
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Amazon S3, Azure 또는 Google Cloud 자격 증명이 필요한 동기화 관계를 만드는 경우 NetApp Copy and Sync 사용자 인터페이스 또는 API를 통해 해당 자격 증명을 지정해야 합니다.  또 다른 방법은 데이터 브로커 그룹을 설정하여 외부 HashiCorp Vault에서 직접 자격 증명(또는 _비밀_)에 액세스하는 것입니다.
+
+이 기능은 Amazon S3, Azure 또는 Google Cloud 자격 증명이 필요한 동기화 관계를 갖춘 Copy and Sync API를 통해 지원됩니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["하나"]금고를 준비하세요
+[role="quick-margin-para"]
+URL을 설정하여 데이터 브로커 그룹에 자격 증명을 제공하도록 볼트를 준비합니다.  보관소의 비밀에 대한 URL은 _Creds_로 끝나야 합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["둘"]데이터 브로커 그룹 준비
+[role="quick-margin-para"]
+그룹의 각 데이터 브로커에 대한 로컬 구성 파일을 수정하여 외부 볼트에서 자격 증명을 가져올 수 있도록 데이터 브로커 그룹을 준비합니다.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["삼"]API를 사용하여 동기화 관계 만들기
+[role="quick-margin-para"]
+이제 모든 것이 설정되었으므로 API 호출을 보내 볼트를 사용하여 비밀을 가져오는 동기화 관계를 만들 수 있습니다.
+
+
+
+== 금고를 준비하세요
+
+보관소에 있는 비밀의 URL을 복사하여 동기화해야 합니다.  해당 URL을 설정하여 볼트를 준비합니다.  만들려는 동기화 관계의 각 소스 및 대상에 대한 자격 증명에 대한 URL을 설정해야 합니다.
+
+URL은 다음과 같이 설정해야 합니다.
+
+`/<path>/<requestid>/<endpoint-protocol>Creds`
+
+길:: 비밀에 대한 접두사 경로입니다.  이는 귀하에게만 고유한 값이 될 수 있습니다.
+요청 ID:: 생성해야 하는 요청 ID입니다.  동기화 관계를 만들 때 API POST 요청의 헤더 중 하나에 ID를 제공해야 합니다.
+엔드포인트 프로토콜:: 다음 프로토콜 중 하나, 정의된 대로 https://api.cloudsync.netapp.com/docs/#/Relationships-v2/post_relationships_v2["관계 v2 문서 게시"^] : S3, AZURE 또는 GCP(각각 대문자여야 함).
+신용:: URL은 _Creds_로 끝나야 합니다.
+
+
+
+
+=== 예시
+
+다음 예에서는 비밀에 대한 URL을 보여줍니다.
+
+소스 자격 증명에 대한 전체 URL 및 경로의 예:: \ http://example.vault.com:8200/my-path/all-secrets/hb312vdasr2/S3Creds 모든 비밀/hb312vdasr2/S3Creds
++
+--
+예시에서 볼 수 있듯이 접두사 경로는 _/my-path/all-secrets/_이고, 요청 ID는 _hb312vdasr2_이며, 소스 엔드포인트는 S3입니다.
+
+--
+대상 자격 증명에 대한 전체 URL 및 경로의 예:: \ http://example.vault.com:8200/my-path/all-secrets/n32hcbnejk2/AZURECreds 모든 비밀/n32hcbnejk2/AZURECreds
++
+--
+접두사 경로는 _/my-path/all-secrets/_이고, 요청 ID는 _n32hcbnejk2_이며, 대상 엔드포인트는 Azure입니다.
+
+--
+
+
+
+
+== 데이터 브로커 그룹 준비
+
+그룹의 각 데이터 브로커에 대한 로컬 구성 파일을 수정하여 외부 볼트에서 자격 증명을 가져올 수 있도록 데이터 브로커 그룹을 준비합니다.
+
+.단계
+. 그룹 내 데이터 브로커에 SSH를 실행합니다.
+. /opt/netapp/databroker/config에 있는 local.json 파일을 편집합니다.
+. enable을 *true*로 설정하고 _external-integrations.hashicorp_ 아래의 구성 매개변수 필드를 다음과 같이 설정합니다.
++
+활성화됨::
++
+--
+** 유효한 값: true/false
+** 유형: 부울
+** 기본값: false
+** 사실: 데이터 브로커는 귀하의 외부 HashiCorp Vault에서 비밀을 얻습니다.
+** 거짓: 데이터 브로커는 로컬 볼트에 자격 증명을 저장합니다.
+
+
+--
+URL::
++
+--
+** 유형: 문자열
+** 값: 외부 볼트에 대한 URL
+
+
+--
+길::
++
+--
+** 유형: 문자열
+** 값: 자격 증명을 사용하여 비밀에 대한 접두사 경로
+
+
+--
+거부-무단::
++
+--
+** 데이터 브로커가 승인되지 않은 외부 볼트를 거부할지 여부를 결정합니다.
+** 유형: 부울
+** 기본값: false
+
+
+--
+인증 방법::
++
+--
+** 데이터 브로커가 외부 볼트에서 자격 증명에 액세스하는 데 사용해야 하는 인증 방법
+** 유형: 문자열
+** 유효한 값: "aws-iam" / "role-app" / "gcp-iam"
+
+
+--
+역할 이름::
++
+--
+** 유형: 문자열
+** 역할 이름(aws-iam 또는 gcp-iam을 사용하는 경우)
+
+
+--
+비밀 ID 및 루트 ID::
++
+--
+** 유형: 문자열(app-role을 사용하는 경우)
+
+
+--
+네임스페이스::
++
+--
+** 유형: 문자열
+** 네임스페이스(필요한 경우 X-Vault-Namespace 헤더)
+
+
+--
+
+
+. 그룹 내의 다른 데이터 브로커에 대해서도 이 단계를 반복합니다.
+
+
+
+
+=== aws-role 인증의 예
+
+[source, json]
+----
+{
+          “external-integrations”: {
+                  “hashicorp”: {
+                         “enabled”: true,
+                         “url”: “https://example.vault.com:8200”,
+                         “path”: ““my-path/all-secrets”,
+                         “reject-unauthorized”: false,
+                         “auth-method”: “aws-role”,
+                         “aws-role”: {
+                               “role-name”: “my-role”
+                         }
+                }
+       }
+}
+----
+
+
+=== gcp-iam 인증의 예
+
+[source, json]
+----
+{
+"external-integrations": {
+    "hashicorp": {
+      "enabled": true,
+      "url": http://ip-10-20-30-55.ec2.internal:8200,
+      "path": "v1/secret",
+      "namespace": "",
+      "reject-unauthorized": true,
+      "auth-method": "gcp-iam",
+      "aws-iam": {
+        "role-name": ""
+      },
+      "app-role": {
+        "root_id": "",
+        "secret_id": ""
+      },
+"gcp-iam": {
+          "role-name": "my-iam-role"
+      }
+    }
+  }
+}
+----
+
+
+=== gcp-iam 인증을 사용할 때 권한 설정
+
+_gcp-iam_ 인증 방법을 사용하는 경우 데이터 브로커에 다음과 같은 GCP 권한이 있어야 합니다.
+
+[source, yaml]
+----
+- iam.serviceAccounts.signJwt
+----
+link:task-installing-gcp.html#permissions-required-for-the-service-account["데이터 브로커에 대한 GCP 권한 요구 사항에 대해 자세히 알아보세요."] .
+
+
+
+== 볼트의 비밀을 사용하여 새로운 동기화 관계 만들기
+
+이제 모든 것이 설정되었으므로 API 호출을 보내 볼트를 사용하여 비밀을 가져오는 동기화 관계를 만들 수 있습니다.
+
+Copy and Sync REST API를 사용하여 관계를 게시합니다.
+
+....
+Headers:
+Authorization: Bearer <user-token>
+Content-Type: application/json
+x-account-id: <accountid>
+x-netapp-external-request-id-src: request ID as part of path for source credentials
+x-netapp-external-request-id-trg: request ID as part of path for target credentials
+Body: post relationship v2 body
+....
+* 사용자 토큰과 NetApp 콘솔 계정 ID를 얻으려면link:api-sync.html["설명서의 이 페이지를 참조하세요"] .
+* 게시물 관계에 대한 신체를 구축하려면 https://api.cloudsync.netapp.com/docs/#/Relationships-v2/post_relationships_v2["관계-v2 API 호출을 참조하세요."^] .
+
+
+
+
+=== 예
+
+POST 요청의 예:
+
+[source, json]
+----
+url: https://api.cloudsync.netapp.com/api/relationships-v2
+headers:
+"x-account-id": "CS-SasdW"
+"x-netapp-external-request-id-src": "hb312vdasr2"
+"Content-Type": "application/json"
+"Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik…"
+Body:
+{
+"dataBrokerId": "5e6e111d578dtyuu1555sa60",
+"source": {
+        "protocol": "s3",
+        "s3": {
+                "provider": "sgws",
+                "host": "1.1.1.1",
+                "port": "443",
+                "bucket": "my-source"
+     },
+"target": {
+        "protocol": "s3",
+        "s3": {
+                "bucket": "my-target-bucket"
+        }
+    }
+}
+----

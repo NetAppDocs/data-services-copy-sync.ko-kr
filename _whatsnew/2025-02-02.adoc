@@ -1,0 +1,11 @@
+= 데이터 브로커를 위한 새로운 OS 지원
+:allow-uri-read: 
+
+
+
+
+=== 데이터 브로커를 위한 새로운 OS 지원
+
+데이터 브로커는 이제 Red Hat Enterprise 9.4, Ubuntu 23.04, Ubuntu 24.04를 실행하는 호스트에서 지원됩니다.
+
+https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#linux-host-requirements["Linux 호스트 요구 사항 보기"] .

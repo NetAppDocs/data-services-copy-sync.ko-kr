@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: task-prepare-object-storage.html 
+keywords: prepare data broker, data broker, object storage, sync, scanner, configure scanner, bluexp, copy and sync 
+summary: 'NetApp Copy and Sync를 사용하여 개체 스토리지 간에 데이터를 동기화하려는 경우(예: Amazon S3에서 Azure Blob으로) 동기화 관계를 만들기 전에 데이터 브로커 그룹을 준비해야 합니다.' 
+---
+= NetApp Copy and Sync에서 개체 스토리지 간 데이터를 동기화하기 위한 데이터 브로커 준비
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Copy and Sync에서 개체 스토리지 간에 데이터를 동기화하려는 경우(예: Amazon S3에서 Azure Blob으로) 동기화 관계를 생성하기 전에 데이터 브로커 그룹을 준비해야 합니다.
+
+.이 작업에 관하여
+데이터 브로커 그룹을 준비하려면 스캐너 구성을 수정해야 합니다.  구성을 수정하지 않으면 이 동기화 관계에서 성능 문제가 발생할 수 있습니다.
+
+.시작하기 전에
+개체 스토리지 간에 데이터를 동기화하는 데 사용하는 데이터 브로커 그룹은 이러한 유형의 동기화 관계만 관리해야 합니다.  데이터 브로커 그룹이 다른 유형의 동기화 관계(예: NFS 대 NFS 또는 개체 스토리지 대 SMB)를 관리하는 경우 해당 동기화 관계의 성능이 부정적인 영향을 받을 수 있습니다.
+
+.단계
+. link:task-login-copyandsync.html["복사 및 동기화에 로그인하세요"] .
+. 복사 및 동기화에서 *데이터 브로커 관리*를 선택합니다.
+. 선택하다image:icon-settings.png["설정 아이콘의 스크린샷"]
+. 스캐너 구성을 업데이트하세요.
++
+.. *스캐너 동시성*을 *1*로 변경합니다.
+.. *스캐너 프로세스 제한*을 *1*로 변경합니다.
+
+
+. *구성 통합*을 선택합니다.
+
+
+.결과
+복사 및 동기화는 데이터 브로커 그룹의 구성을 업데이트합니다.
+
+.다음은 무엇인가요?
+방금 구성한 데이터 브로커 그룹을 사용하여 개체 스토리지 간의 동기화 관계를 만들 수 있습니다.

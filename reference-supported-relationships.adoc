@@ -1,0 +1,324 @@
+---
+sidebar: sidebar 
+permalink: reference-supported-relationships.html 
+keywords: supported sync relationships, support, supported target, supported source 
+summary: NetApp Copy and Sync를 사용하면 소스에서 대상으로 데이터를 동기화할 수 있습니다.  이것을 동기화 관계라고 합니다.  시작하기 전에 지원되는 관계를 이해해야 합니다. 
+---
+= NetApp Copy and Sync에서 지원되는 동기화 관계
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Copy and Sync를 사용하면 소스에서 대상으로 데이터를 동기화할 수 있습니다.  이것을 동기화 관계라고 합니다.  시작하기 전에 지원되는 관계를 이해해야 합니다.
+
+[cols="20,25"]
+|===
+| 소스 위치 | 지원되는 대상 위치 
+
+
+| 아마존 EFS  a| 
+* 아마존 EFS
+* ONTAP 용 Amazon FSx
+* 아마존 S3
+* Azure Blob
+* Azure NetApp Files
+* Cloud Volumes ONTAP
+* 구글 클라우드 스토리지
+* IBM 클라우드 객체 스토리지
+* NFS 서버
+* 온프레미스 ONTAP 클러스터(NFS 또는 SMB)
+* SMB 서버
+* StorageGRID
+
+
+
+
+| ONTAP 용 Amazon FSx  a| 
+* 아마존 EFS
+* ONTAP 용 Amazon FSx
+* 아마존 S3
+* Azure Blob
+* Azure 데이터 레이크 스토리지 Gen2
+* Azure NetApp Files
+* Cloud Volumes ONTAP
+* 구글 클라우드 스토리지
+* IBM 클라우드 객체 스토리지
+* NFS 서버
+* 온프레미스 ONTAP 클러스터(NFS 또는 SMB)
+* SMB 서버
+* StorageGRID
+
+
+
+
+| 아마존 S3  a| 
+* 아마존 EFS
+* ONTAP 용 Amazon FSx
+* 아마존 S3
+* Azure Blob
+* Azure 데이터 레이크 스토리지 Gen2
+* Azure NetApp Files
+* 상자 ^1^
+* Cloud Volumes ONTAP
+* 구글 클라우드 스토리지
+* IBM 클라우드 객체 스토리지
+* NFS 서버
+* 온프레미스 ONTAP 클러스터(NFS 또는 SMB)
+* ONTAP S3 스토리지
+* SMB 서버
+* StorageGRID
+
+
+
+
+| Azure Blob  a| 
+* 아마존 EFS
+* ONTAP 용 Amazon FSx
+* 아마존 S3
+* Azure Blob
+* Azure NetApp Files
+* Cloud Volumes ONTAP
+* 구글 클라우드 스토리지
+* IBM 클라우드 객체 스토리지
+* NFS 서버
+* 온프레미스 ONTAP 클러스터(NFS 또는 SMB)
+* SMB 서버
+* StorageGRID
+
+
+
+
+| Azure 데이터 레이크 스토리지 Gen2  a| 
+* Azure NetApp Files
+* Cloud Volumes ONTAP
+* ONTAP 용 FSx
+* IBM 클라우드 객체 스토리지
+* NFS 서버
+* 온프레미스 ONTAP
+* ONTAP S3 스토리지
+* SMB 서버
+* StorageGRID
+
+
+
+
+| Azure NetApp Files  a| 
+* 아마존 EFS
+* ONTAP 용 Amazon FSx
+* 아마존 S3
+* Azure Blob
+* Azure 데이터 레이크 스토리지 Gen2
+* Azure NetApp Files
+* Cloud Volumes ONTAP
+* 구글 클라우드 스토리지
+* IBM 클라우드 객체 스토리지
+* NFS 서버
+* 온프레미스 ONTAP 클러스터(NFS 또는 SMB)
+* SMB 서버
+* StorageGRID
+
+
+
+
+| 상자 ^1^  a| 
+* ONTAP 용 Amazon FSx
+* 아마존 S3
+* Azure NetApp Files
+* Cloud Volumes ONTAP
+* IBM 클라우드 객체 스토리지
+* NFS 서버
+* SMB 서버
+* StorageGRID
+
+
+
+
+| Cloud Volumes ONTAP  a| 
+* 아마존 EFS
+* ONTAP 용 Amazon FSx
+* 아마존 S3
+* Azure Blob
+* Azure 데이터 레이크 스토리지 Gen2
+* Azure NetApp Files
+* Cloud Volumes ONTAP
+* 구글 클라우드 스토리지
+* IBM 클라우드 객체 스토리지
+* NFS 서버
+* 온프레미스 ONTAP 클러스터(NFS 또는 SMB)
+* SMB 서버
+* StorageGRID
+
+
+
+
+| 구글 클라우드 스토리지  a| 
+* 아마존 EFS
+* ONTAP 용 Amazon FSx
+* 아마존 S3
+* Azure Blob
+* Azure NetApp Files
+* Cloud Volumes ONTAP
+* 구글 클라우드 스토리지
+* IBM 클라우드 객체 스토리지
+* NFS 서버
+* 온프레미스 ONTAP 클러스터(NFS 또는 SMB)
+* ONTAP S3 스토리지
+* SMB 서버
+* StorageGRID
+
+
+
+
+| 구글 드라이브  a| 
+* NFS 서버
+* SMB 서버
+
+
+
+
+| IBM 클라우드 객체 스토리지  a| 
+* 아마존 EFS
+* ONTAP 용 Amazon FSx
+* 아마존 S3
+* Azure Blob
+* Azure 데이터 레이크 스토리지 Gen2
+* Azure NetApp Files
+* 상자 ^1^
+* Cloud Volumes ONTAP
+* 구글 클라우드 스토리지
+* IBM 클라우드 객체 스토리지
+* NFS 서버
+* 온프레미스 ONTAP 클러스터(NFS 또는 SMB)
+* SMB 서버
+* StorageGRID
+
+
+
+
+| NFS 서버  a| 
+* 아마존 EFS
+* ONTAP 용 Amazon FSx
+* 아마존 S3
+* Azure Blob
+* Azure 데이터 레이크 스토리지 Gen2
+* Azure NetApp Files
+* Cloud Volumes ONTAP
+* 구글 클라우드 스토리지
+* 구글 드라이브
+* IBM 클라우드 객체 스토리지
+* NFS 서버
+* 온프레미스 ONTAP 클러스터(NFS 또는 SMB)
+* ONTAP S3 스토리지
+* SMB 서버
+* StorageGRID
+
+
+
+
+| 온프레미스 ONTAP 클러스터(NFS 또는 SMB)  a| 
+* 아마존 EFS
+* ONTAP 용 Amazon FSx
+* 아마존 S3
+* Azure Blob
+* Azure 데이터 레이크 스토리지 Gen2
+* Azure NetApp Files
+* Cloud Volumes ONTAP
+* 구글 클라우드 스토리지
+* IBM 클라우드 객체 스토리지
+* NFS 서버
+* 온프레미스 ONTAP 클러스터(NFS 또는 SMB)
+* SMB 서버
+* StorageGRID
+
+
+
+
+| ONTAP S3 스토리지  a| 
+* 아마존 S3
+* Azure 데이터 레이크 스토리지 Gen2
+* 구글 클라우드 스토리지
+* NFS 서버
+* SMB 서버
+* StorageGRID
+* ONTAP S3 스토리지
+
+
+
+
+| SFTP ^2^ | S3 
+
+
+| SMB 서버  a| 
+* 아마존 EFS
+* ONTAP 용 Amazon FSx
+* 아마존 S3
+* Azure Blob
+* Azure 데이터 레이크 스토리지 Gen2
+* Azure NetApp Files
+* Cloud Volumes ONTAP
+* 구글 클라우드 스토리지
+* 구글 드라이브
+* IBM 클라우드 객체 스토리지
+* NFS 서버
+* 온프레미스 ONTAP 클러스터(NFS 또는 SMB)
+* ONTAP S3 스토리지
+* SMB 서버
+* StorageGRID
+
+
+
+
+| StorageGRID  a| 
+* 아마존 EFS
+* ONTAP 용 Amazon FSx
+* 아마존 S3
+* Azure Blob
+* Azure 데이터 레이크 스토리지 Gen2
+* Azure NetApp Files
+* 상자 ^1^
+* Cloud Volumes ONTAP
+* 구글 클라우드 스토리지
+* IBM 클라우드 객체 스토리지
+* NFS 서버
+* 온프레미스 ONTAP 클러스터(NFS 또는 SMB)
+* ONTAP S3 스토리지
+* SMB 서버
+* StorageGRID
+
+
+|===
+참고사항:
+
+. Box 지원은 미리보기로 제공됩니다.
+. 이 소스/대상과의 동기화 관계는 Copy 및 Sync API를 사용해서만 지원됩니다.
+. Blob 컨테이너가 대상인 경우 특정 Azure Blob 저장소 계층을 선택할 수 있습니다.
++
+** 뜨거운 보관
+** 시원한 보관
+
+
+. [[storage-classes]]Amazon S3가 대상인 경우 특정 S3 스토리지 클래스를 선택할 수 있습니다.
++
+** 표준(기본 클래스)
+** 지능형 계층화
+** 표준-빈번하지 않은 액세스
+** 1존-접근 빈도 낮음
+** 빙하 심층 기록 보관소
+** Glacier Flexible Retrieval
+** 빙하 즉시 검색
+
+
+. Google Cloud Storage 버킷이 대상인 경우 특정 스토리지 클래스를 선택할 수 있습니다.
++
+** 기준
+** 니어라인
+** 콜드라인
+** 보관소
+
+
+

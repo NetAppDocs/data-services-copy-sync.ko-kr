@@ -1,0 +1,131 @@
+---
+sidebar: sidebar 
+permalink: task-installing-aws.html 
+keywords: data broker, install, aws, networking, permissions, regions, install data broker in aws, install in aws, deploy in aws, deploy data broker in aws, cft, template, iam role, use your own iam role, regions, supported regions, networking requirements, port, ports, 443, port 443, ntp, network time protocol, permissions, iam role, iam permissions, aws data broker 
+summary: 새로운 데이터 브로커를 생성할 때 AWS Data Broker 옵션을 선택하여 VPC의 새 EC2 인스턴스에 데이터 브로커 소프트웨어를 배포합니다.  NetApp Copy and Sync는 설치 과정을 안내하지만, 설치를 준비하는 데 도움이 되도록 이 페이지에서도 요구 사항과 단계를 반복해서 설명합니다. 
+---
+= NetApp Copy and Sync를 위해 AWS에서 새로운 데이터 브로커 만들기
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Copy and Sync에 대한 새로운 데이터 브로커 그룹을 생성할 때 VPC의 새 EC2 인스턴스에 데이터 브로커 소프트웨어를 배포하려면 Amazon Web Services를 선택하세요.  NetApp Copy and Sync는 설치 과정을 안내하지만, 설치를 준비하는 데 도움이 되도록 이 페이지에서도 요구 사항과 단계를 반복해서 설명합니다.
+
+클라우드나 사내에 있는 기존 Linux 호스트에 데이터 브로커를 설치하는 옵션도 있습니다. link:task-installing-linux.html["자세히 알아보기"] .
+
+
+
+== 지원되는 AWS 지역
+
+중국 지역을 제외한 모든 지역이 지원됩니다.
+
+
+
+== 루트 권한
+
+데이터 브로커 소프트웨어는 Linux 호스트에서 루트로 자동 실행됩니다.  데이터 브로커 작업을 위해서는 루트로 실행해야 합니다.  예를 들어, 주식을 마운트하는 것입니다.
+
+
+
+== 네트워킹 요구 사항
+
+* 데이터 브로커는 포트 443을 통해 복사 및 동기화 작업을 폴링할 수 있도록 아웃바운드 인터넷 연결이 필요합니다.
++
+Copy and Sync가 AWS에 데이터 브로커를 배포하면 필요한 아웃바운드 통신을 지원하는 보안 그룹을 생성합니다.  설치 과정에서 프록시 서버를 사용하도록 데이터 브로커를 구성할 수 있습니다.
+
++
+아웃바운드 연결을 제한해야 하는 경우 다음을 참조하세요.link:reference-networking.html["데이터 브로커가 연락하는 엔드포인트 목록"] .
+
+* NetApp 소스, 대상 및 데이터 브로커를 구성하여 NTP(네트워크 시간 프로토콜) 서비스를 사용할 것을 권장합니다.  세 가지 구성 요소 간의 시간 차이는 5분을 초과해서는 안 됩니다.
+
+
+
+
+== AWS에 데이터 브로커를 배포하는 데 필요한 권한
+
+데이터 브로커를 배포하는 데 사용하는 AWS 사용자 계정에는 다음에 포함된 권한이 있어야 합니다. https://s3.amazonaws.com/metadata.datafabric.io/docs/aws_iam_policy.json["이 NetApp 제공 정책"^] .
+
+
+
+== [[iam]]AWS 데이터 브로커에서 자체 IAM 역할을 사용하기 위한 요구 사항
+
+Copy and Sync가 데이터 브로커를 배포하면 데이터 브로커 인스턴스에 대한 IAM 역할이 생성됩니다. 원하는 경우 사용자 고유의 IAM 역할을 사용하여 데이터 브로커를 배포할 수 있습니다.  조직에 엄격한 보안 정책이 있는 경우 이 옵션을 사용할 수 있습니다.
+
+IAM 역할은 다음 요구 사항을 충족해야 합니다.
+
+* EC2 서비스는 신뢰할 수 있는 엔터티로서 IAM 역할을 맡을 수 있어야 합니다.
+* link:media/aws_iam_policy_data_broker.json["이 JSON 파일에 정의된 권한"^]데이터 브로커가 제대로 작동하려면 IAM 역할에 연결되어야 합니다.
+
+
+데이터 브로커를 배포할 때 IAM 역할을 지정하려면 아래 단계를 따르세요.
+
+
+
+== 데이터 브로커 생성
+
+새로운 데이터 브로커를 만드는 방법에는 여러 가지가 있습니다.  이 단계에서는 동기화 관계를 생성할 때 AWS에 데이터 브로커를 설치하는 방법을 설명합니다.
+
+.단계
+. link:task-login-copyandsync.html["복사 및 동기화에 로그인하세요"] .
+. *새 동기화 만들기*를 선택합니다.
+. *동기화 관계 정의* 페이지에서 소스와 대상을 선택하고 *계속*을 선택합니다.
++
+*데이터 브로커 그룹* 페이지에 도달할 때까지 단계를 완료하세요.
+
+. *데이터 브로커 그룹* 페이지에서 *데이터 브로커 만들기*를 선택한 다음 *Amazon Web Services*를 선택합니다.
++
+image:screenshot-aws.png["AWS, Azure, Google Cloud, 온프레미스 데이터 브로커 중에서 선택할 수 있는 Data Broker 페이지의 스크린샷입니다."]
+
+. 데이터 브로커의 이름을 입력하고 *계속*을 선택합니다.
+. AWS 액세스 키를 입력하면 Copy and Sync가 사용자를 대신하여 AWS에서 데이터 브로커를 생성할 수 있습니다.
++
+키는 저장되지 않으며 다른 목적으로 사용되지 않습니다.
+
++
+액세스 키를 제공하지 않으려면 페이지 하단의 링크를 선택하여 대신 CloudFormation 템플릿을 사용하세요.  이 옵션을 사용하면 AWS에 직접 로그인하므로 자격 증명을 제공할 필요가 없습니다.
+
++
+[[cft]]다음 비디오는 CloudFormation 템플릿을 사용하여 데이터 브로커 인스턴스를 시작하는 방법을 보여줍니다.
+
++
+.AWS CloudFormation 템플릿에서 데이터 브로커 시작
+video::abaf0898-ea15-4f84-938e-b24c010b21e8[panopto]
+. AWS 액세스 키를 입력한 경우 인스턴스의 위치를 선택하고, 키 쌍을 선택하고, 공용 IP 주소를 활성화할지 여부를 선택하고, 기존 IAM 역할을 선택하거나, 필드를 비워 두면 복사 및 동기화가 해당 역할을 자동으로 생성합니다.  KMS 키를 사용하여 데이터 브로커를 암호화하는 옵션도 있습니다.
++
+자신의 IAM 역할을 선택하는 경우<<iam,필요한 권한을 제공해야 합니다.>> .
+
++
+image:screenshot_aws_data_broker.png["AWS에 데이터 브로커를 배포할 때 제공해야 하는 정보의 스크린샷입니다."]
+
+. VPC에서 인터넷 접속에 프록시가 필요한 경우 프록시 구성을 지정합니다.
+. 데이터 브로커를 사용할 수 있게 되면 복사 및 동기화에서 *계속*을 선택합니다.
++
+다음 이미지는 AWS에 성공적으로 배포된 인스턴스를 보여줍니다.
+
++
+image:screenshot-data-broker-group-selected.png["이 스크린샷은 성공적으로 배포된 인스턴스를 보여줍니다.  인터페이스에는 AWS 네트워킹을 포함한 인스턴스에 대한 세부 정보가 표시됩니다."]
+
+. 마법사의 페이지를 완료하여 새로운 동기화 관계를 만듭니다.
+
+
+.결과
+AWS에 데이터 브로커를 배포하고 새로운 동기화 관계를 생성했습니다.  이 데이터 브로커 그룹을 추가 동기화 관계와 함께 사용할 수 있습니다.
+
+
+
+== 데이터 브로커 인스턴스에 대한 세부 정보
+
+Copy and Sync는 다음 구성을 사용하여 AWS에서 데이터 브로커를 생성합니다.
+
+Node.js 호환성:: v21.2.0
+인스턴스 유형:: 해당 지역에서 사용 가능한 경우 m5n.xlarge, 그렇지 않은 경우 m5.xlarge
+vCPU:: 4
+숫양:: 16GB
+운영 체제:: 아마존 리눅스 2023
+디스크 크기 및 유형:: 10GB GP2 SSD
+
