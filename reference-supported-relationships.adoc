@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-supported-relationships.html 
 keywords: supported sync relationships, support, supported target, supported source 
-summary: NetApp Copy and Sync를 사용하면 소스에서 대상으로 데이터를 동기화할 수 있습니다.  이것을 동기화 관계라고 합니다.  시작하기 전에 지원되는 관계를 이해해야 합니다. 
+summary: NetApp Copy and Sync 사용하면 소스에서 대상으로 데이터를 동기화할 수 있습니다.  이것을 동기화 관계라고 합니다.  시작하기 전에 지원되는 관계를 이해해야 합니다. 
 ---
-= NetApp Copy and Sync에서 지원되는 동기화 관계
+= NetApp Copy and Sync 에서 지원되는 동기화 관계
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp Copy and Sync를 사용하면 소스에서 대상으로 데이�
 
 
 [role="lead"]
-NetApp Copy and Sync를 사용하면 소스에서 대상으로 데이터를 동기화할 수 있습니다.  이것을 동기화 관계라고 합니다.  시작하기 전에 지원되는 관계를 이해해야 합니다.
+NetApp Copy and Sync 사용하면 소스에서 대상으로 데이터를 동기화할 수 있습니다.  이것을 동기화 관계라고 합니다.  시작하기 전에 지원되는 관계를 이해해야 합니다.
 
 [cols="20,25"]
 |===

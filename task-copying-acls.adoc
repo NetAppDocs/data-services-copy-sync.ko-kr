@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-copying-acls.html 
 keywords: permissions, access control list, acls, ntfs, cifs, smb, shares, robocopy, copy, transfer, activate, operating system, os, ram, cpu, networking, copy acls to the target 
-summary: 'NetApp Copy and Sync는 SMB 공유 간, 그리고 SMB 공유와 개체 스토리지( ONTAP S3 제외) 간에 액세스 제어 목록(ACL)을 복사할 수 있습니다.  필요한 경우 robocopy를 사용하여 SMB 공유 간 ACL을 수동으로 보존할 수도 있습니다.' 
+summary: 'NetApp Copy and Sync SMB 공유 간, 그리고 SMB 공유와 개체 스토리지( ONTAP S3 제외) 간에 액세스 제어 목록(ACL)을 복사할 수 있습니다.  필요한 경우 robocopy를 사용하여 SMB 공유 간 ACL을 수동으로 보존할 수도 있습니다.' 
 ---
-= NetApp Copy and Sync에서 SMB 공유의 ACL 복사
+= NetApp Copy and Sync 에서 SMB 공유의 ACL 복사
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'NetApp Copy and Sync는 SMB 공유 간, 그리고 SMB 공유와 개체
 
 
 [role="lead"]
-NetApp Copy and Sync는 SMB 공유 간, 그리고 SMB 공유와 개체 스토리지( ONTAP S3 제외) 간에 액세스 제어 목록(ACL)을 복사할 수 있습니다.  필요한 경우 robocopy를 사용하여 SMB 공유 간 ACL을 수동으로 보존할 수도 있습니다.
+NetApp Copy and Sync SMB 공유 간, 그리고 SMB 공유와 개체 스토리지( ONTAP S3 제외) 간에 액세스 제어 목록(ACL)을 복사할 수 있습니다.  필요한 경우 robocopy를 사용하여 SMB 공유 간 ACL을 수동으로 보존할 수도 있습니다.
 
 .선택
 * <<ACL을 복사하기 위한 복사 및 동기화 설정,ACL을 자동으로 복사하도록 복사 및 동기화 설정>>

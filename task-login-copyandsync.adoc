@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-login-copyandsync.html 
 keywords: copy and sync, NetApp Copy and Sync, log in to Copy and Sync, NetApp BlueXP, BlueXP Copy and Sync, NetApp Console 
-summary: NetApp 콘솔을 사용하여 NetApp Copy and Sync에 로그인합니다. 
+summary: NetApp Console 사용하여 NetApp Copy and Sync 에 로그인합니다. 
 ---
-= NetApp Copy and Sync에 로그인하세요
+= NetApp Copy and Sync 에 로그인하세요
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,18 +14,18 @@ summary: NetApp 콘솔을 사용하여 NetApp Copy and Sync에 로그인합니�
 
 
 [role="lead"]
-NetApp 콘솔을 사용하여 NetApp Copy and Sync에 로그인합니다.
+NetApp Console 사용하여 NetApp Copy and Sync 에 로그인합니다.
 
 콘솔에 로그인하려면 NetApp 지원 사이트 자격 증명을 사용하거나 이메일과 비밀번호를 사용하여 NetApp 클라우드 로그인에 가입할 수 있습니다. https://docs.netapp.com/us-en/bluexp-setup-admin/task-logging-in.html["로그인에 대해 자세히 알아보세요"^] .
 
-NetApp Copy and Sync는 ID 액세스 관리를 사용하여 각 사용자가 특정 작업에 대해 갖는 액세스 권한을 관리합니다.
+NetApp Copy and Sync ID 액세스 관리를 사용하여 각 사용자가 특정 작업에 대해 갖는 액세스 권한을 관리합니다.
 
-*필수 NetApp 콘솔 역할* 조직 관리자 역할. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["NetApp 콘솔 액세스 역할에 대해 알아보세요"^] .
+*필수 NetApp Console 역할* 조직 관리자 역할. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["NetApp Console 액세스 역할에 대해 알아보세요"^] .
 
 .단계
-. 웹 브라우저를 열고 이동하세요 https://console.netapp.com/["NetApp 콘솔"^] .
+. 웹 브라우저를 열고 이동하세요 https://console.netapp.com/["NetApp Console"^] .
 +
-NetApp 콘솔 로그인 페이지가 나타납니다.
+NetApp Console 로그인 페이지가 나타납니다.
 
 . 콘솔에 로그인합니다.
 . 콘솔 왼쪽 탐색에서 *모바일* > *복사 및 동기화*를 선택합니다.

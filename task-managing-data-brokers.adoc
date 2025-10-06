@@ -4,7 +4,7 @@ permalink: task-managing-data-brokers.html
 keywords: manage data brokers, manage data broker groups, data broker performance, data broker configuration, data broker removal, remove data broker, delete data broker, groups, data broker group, rename data broker group, add data broker, data broker cpu, data broker ram, data broker status, edit group name, change group name, modify group name 
 summary: 데이터 브로커는 소스 위치에서 대상 위치로 데이터를 동기화합니다.  동기화 관계를 생성할 때마다 데이터 브로커가 필요합니다.  그룹에 새로운 데이터 브로커를 추가하고, 데이터 브로커에 대한 정보를 보는 등 데이터 브로커를 관리합니다. 
 ---
-= NetApp Copy and Sync에서 데이터 브로커 그룹 관리
+= NetApp Copy and Sync 에서 데이터 브로커 그룹 관리
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 데이터 브로커는 소스 위치에서 대상 위치로 데이터�
 
 
 [role="lead"]
-NetApp Copy and Sync의 데이터 브로커 그룹은 소스 위치에서 대상 위치로 데이터를 동기화합니다.  생성하는 각 동기화 관계에는 그룹에 하나 이상의 데이터 브로커가 필요합니다.  그룹에 새로운 데이터 브로커를 추가하고, 그룹에 대한 정보를 보는 등 데이터 브로커 그룹을 관리합니다.
+NetApp Copy and Sync 의 데이터 브로커 그룹은 소스 위치에서 대상 위치로 데이터를 동기화합니다.  생성하는 각 동기화 관계에는 그룹에 하나 이상의 데이터 브로커가 필요합니다.  그룹에 새로운 데이터 브로커를 추가하고, 그룹에 대한 정보를 보는 등 데이터 브로커 그룹을 관리합니다.
 
 
 
@@ -282,7 +282,7 @@ image:screenshot_sync_group_remove.gif["각 데이터 브로커 그룹에서 사
 
 
 .결과
-복사 및 동기화를 수행하면 그룹에서 데이터 브로커가 제거됩니다.
+복사 및 동기화를 통해 그룹에서 데이터 브로커가 제거됩니다.
 
 
 

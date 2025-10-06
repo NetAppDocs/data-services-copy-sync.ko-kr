@@ -11,7 +11,7 @@ settings:
   langs: ko-kr,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: NetApp 복사 및 동기화 문서
+  - title: NetApp Copy and Sync 문서
     url: "/index.html"
   - title: 릴리스 노트
     entries:
@@ -21,7 +21,7 @@ sidebar:
       url: "/reference-limitations.html"
   - title: 시작하기
     entries:
-    - title: NetApp Copy and Sync에 대해 알아보세요
+    - title: NetApp Copy and Sync 에 대해 알아보세요
       url: "/concept-cloud-sync.html"
     - title: 빠른 시작
       url: "/task-quick-start.html"
@@ -31,7 +31,7 @@ sidebar:
       url: "/reference-requirements.html"
     - title: 네트워킹 준비
       url: "/reference-networking.html"
-    - title: NetApp Copy and Sync에 로그인하세요
+    - title: NetApp Copy and Sync 에 로그인하세요
       url: "/task-login-copyandsync.html"
     - title: 데이터 브로커 설치
       entries:
@@ -43,7 +43,7 @@ sidebar:
         url: "/task-installing-gcp.html"
       - title: Linux 호스트에 설치
         url: "/task-installing-linux.html"
-  - title: NetApp 복사 및 동기화 사용
+  - title: NetApp Copy and Sync 사용
     entries:
     - title: 소스와 대상 간 데이터 동기화
       entries:

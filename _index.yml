@@ -1,21 +1,21 @@
 ---
 indexpage:
-  title: NetApp 복사 및 동기화 설명서
-  summary: NetApp Copy and Sync는 온프레미스와 클라우드 개체 저장소 간에 NAS 데이터를 전송하기 위한 클라우드 복제 및
-    동기화 서비스입니다.
+  title: NetApp Copy and Sync 설명서
+  summary: NetApp Copy and Sync 온프레미스와 클라우드 개체 저장소 간에 NAS 데이터를 전송하기 위한 클라우드 복제 및 동기화
+    서비스입니다.
   keywords: bluexp-family, documentation, cloud, copy and sync, cloud sync, netapp
-  lead: NetApp Copy and Sync는 온프레미스와 클라우드 개체 저장소 간에 NAS 데이터를 전송하기 위한 클라우드 복제 및 동기화
+  lead: NetApp Copy and Sync 온프레미스와 클라우드 개체 저장소 간에 NAS 데이터를 전송하기 위한 클라우드 복제 및 동기화
     서비스입니다.
   tiles:
   - title: 시작하기
     links:
-    - title: NetApp 복사 및 동기화 개요
+    - title: NetApp Copy and Sync 개요
       url: concept-cloud-sync.html
     - title: 빠른 시작
       url: task-quick-start.html
     - title: 자주 묻는 질문
       url: faq.html
-  - title: NetApp 복사 및 동기화 사용
+  - title: NetApp Copy and Sync 사용
     links:
     - title: 동기화 관계 만들기
       url: task-creating-relationships.html
@@ -25,9 +25,9 @@ indexpage:
       url: task-managing-data-brokers.html
   - title: 블로그 및 커뮤니티
     links:
-    - title: NetApp 콘솔
+    - title: NetApp Console
       url: https://www.netapp.com/console
-    - title: NetApp 데이터 서비스
+    - title: NetApp Data Services
       url: https://www.netapp.com/data-services/
     - title: NetApp 커뮤니티
       url: https://community.netapp.com

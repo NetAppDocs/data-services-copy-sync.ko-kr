@@ -4,7 +4,7 @@ permalink: reference-limitations.html
 keywords: limitations, china, unsupported regions 
 summary: 알려진 제한 사항은 이 제품 릴리스에서 지원하지 않거나 올바르게 상호 운용되지 않는 플랫폼, 장치 또는 기능을 나타냅니다. 이러한 제한 사항을 주의 깊게 검토하세요. 
 ---
-= NetApp 복사 및 동기화의 제한 사항
+= NetApp Copy and Sync 의 제한 사항
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: 알려진 제한 사항은 이 제품 릴리스에서 지원하지 않�
 [role="lead"]
 알려진 제한 사항은 이 제품 릴리스에서 지원하지 않거나 올바르게 상호 운용되지 않는 플랫폼, 장치 또는 기능을 나타냅니다. 이러한 제한 사항을 주의 깊게 검토하세요.
 
-NetApp Copy and Sync는 다음 지역에서는 지원되지 않습니다.
+NetApp Copy and Sync 다음 지역에서는 지원되지 않습니다.
 
 * AWS 정부 지역
 * Azure 정부 지역

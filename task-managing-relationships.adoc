@@ -4,7 +4,7 @@ permalink: task-managing-relationships.html
 keywords: sync, immediate, now, schedule, minutes, hours, on, off, delete, group, accelerate, accelerating, grouping, multiple data brokers, sync now, turn off, turn on, sync schedule, settings, change settings, recently modified files, delete files on target, retries, retry, file types, exclude file type, include file type, delete relationship 
 summary: 데이터를 즉시 동기화하고, 일정을 변경하는 등 언제든지 동기화 관계를 관리할 수 있습니다. 
 ---
-= NetApp Copy and Sync에서 동기화 관계 관리
+= NetApp Copy and Sync 에서 동기화 관계 관리
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 데이터를 즉시 동기화하고, 일정을 변경하는 등 언제�
 
 
 [role="lead"]
-NetApp Copy and Sync에서 데이터를 즉시 동기화하고, 일정을 변경하는 등 언제든지 동기화 관계를 관리할 수 있습니다.
+NetApp Copy and Sync 에서 데이터를 즉시 동기화하고, 일정을 변경하는 등 언제든지 동기화 관계를 관리할 수 있습니다.
 
 
 
@@ -90,7 +90,7 @@ SMB 서버에 대한 참고 사항: 도메인이 새 것이라면 자격 증명�
 
 각 동기화 관계에 대한 *알림* 설정을 사용하면 NetApp 콘솔의 알림 센터에서 복사 및 동기화 알림을 받을지 여부를 선택할 수 있습니다.  성공적인 데이터 동기화, 실패한 데이터 동기화, 취소된 데이터 동기화에 대한 알림을 활성화할 수 있습니다.
 
-image:https://raw.githubusercontent.com/NetAppDocs/bluexp-copy-sync/main/media/screenshot-notification-center.png["NetApp 콘솔의 알림 센터를 보여주는 스크린샷입니다."]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-copy-sync/main/media/screenshot-notification-center.png["NetApp Console 의 알림 센터를 보여주는 스크린샷입니다."]
 
 또한, 이메일로 알림을 받으실 수도 있습니다.
 

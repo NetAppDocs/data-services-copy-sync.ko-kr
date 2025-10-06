@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-installing-aws.html 
 keywords: data broker, install, aws, networking, permissions, regions, install data broker in aws, install in aws, deploy in aws, deploy data broker in aws, cft, template, iam role, use your own iam role, regions, supported regions, networking requirements, port, ports, 443, port 443, ntp, network time protocol, permissions, iam role, iam permissions, aws data broker 
-summary: 새로운 데이터 브로커를 생성할 때 AWS Data Broker 옵션을 선택하여 VPC의 새 EC2 인스턴스에 데이터 브로커 소프트웨어를 배포합니다.  NetApp Copy and Sync는 설치 과정을 안내하지만, 설치를 준비하는 데 도움이 되도록 이 페이지에서도 요구 사항과 단계를 반복해서 설명합니다. 
+summary: 새로운 데이터 브로커를 생성할 때 AWS Data Broker 옵션을 선택하여 VPC의 새 EC2 인스턴스에 데이터 브로커 소프트웨어를 배포합니다.  NetApp Copy and Sync 설치 과정을 안내하지만, 설치를 준비하는 데 도움이 되도록 이 페이지에서도 요구 사항과 단계를 반복해서 설명합니다. 
 ---
-= NetApp Copy and Sync를 위해 AWS에서 새로운 데이터 브로커 만들기
+= NetApp Copy and Sync 위해 AWS에서 새로운 데이터 브로커 만들기
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 새로운 데이터 브로커를 생성할 때 AWS Data Broker 옵션�
 
 
 [role="lead"]
-NetApp Copy and Sync에 대한 새로운 데이터 브로커 그룹을 생성할 때 VPC의 새 EC2 인스턴스에 데이터 브로커 소프트웨어를 배포하려면 Amazon Web Services를 선택하세요.  NetApp Copy and Sync는 설치 과정을 안내하지만, 설치를 준비하는 데 도움이 되도록 이 페이지에서도 요구 사항과 단계를 반복해서 설명합니다.
+NetApp Copy and Sync 대한 새로운 데이터 브로커 그룹을 생성할 때 VPC의 새 EC2 인스턴스에 데이터 브로커 소프트웨어를 배포하려면 Amazon Web Services를 선택하세요.  NetApp Copy and Sync 설치 과정을 안내하지만, 설치를 준비하는 데 도움이 되도록 이 페이지에서도 요구 사항과 단계를 반복해서 설명합니다.
 
 클라우드나 사내에 있는 기존 Linux 호스트에 데이터 브로커를 설치하는 옵션도 있습니다. link:task-installing-linux.html["자세히 알아보기"] .
 

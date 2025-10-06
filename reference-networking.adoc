@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-networking.html 
 keywords: networking, 443, port, ports, port 443, connections, connectivity, path, paths, vpn, copy and sync, netapp, bluexp, cloud sync,connectivity,data broker 
-summary: NetApp Copy and Sync를 위한 네트워킹에는 데이터 브로커 그룹과 소스 및 대상 위치 간의 연결, 그리고 포트 443을 통한 데이터 브로커의 아웃바운드 인터넷 연결이 포함됩니다. 
+summary: NetApp Copy and Sync 위한 네트워킹에는 데이터 브로커 그룹과 소스 및 대상 위치 간의 연결, 그리고 포트 443을 통한 데이터 브로커의 아웃바운드 인터넷 연결이 포함됩니다. 
 ---
-= NetApp Copy and Sync에 대한 네트워킹 개요
+= NetApp Copy and Sync 대한 네트워킹 개요
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: NetApp Copy and Sync를 위한 네트워킹에는 데이터 브로커 �
 
 
 [role="lead"]
-NetApp Copy and Sync를 위한 네트워킹에는 데이터 브로커 그룹과 소스 및 대상 위치 간의 연결, 그리고 포트 443을 통한 데이터 브로커의 아웃바운드 인터넷 연결이 포함됩니다.
+NetApp Copy and Sync 위한 네트워킹에는 데이터 브로커 그룹과 소스 및 대상 위치 간의 연결, 그리고 포트 443을 통한 데이터 브로커의 아웃바운드 인터넷 연결이 포함됩니다.
 
 
 
@@ -106,7 +106,7 @@ NetApp 데이터 브로커는 Copy and Sync와 통신하고 몇몇 다른 서비
 | \ https://sts.amazonaws.com \ https://sts.us-east-1.amazonaws.com | 데이터 브로커가 AWS에 배포되거나 사내에 배포되고 AWS 자격 증명이 제공되는 경우 AWS 자격 증명을 확인합니다.  데이터 브로커는 배포 중, 업데이트 시, 재시작 시 이 엔드포인트에 접속합니다. 
 
 
-| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com | 새로운 동기화 관계에 대한 소스 파일을 선택하기 위해 분류를 사용하는 경우 NetApp 데이터 분류에 문의하세요. 
+| \ https://api.bluexp.netapp.com \ https://netapp-cloud-account.auth0.com | 새로운 동기화 관계에 대한 소스 파일을 선택하기 위해 분류를 사용하는 경우 NetApp Data Classification 문의하세요. 
 
 
 | \ https://pubsub.googleapis.com | Google 스토리지 계정에서 지속적인 동기화 관계를 만드는 경우. 

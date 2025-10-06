@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: api-sync.html 
 keywords: api, apis, rest, restful, authorization, getting started, body, header, token, reference, expired token, expires, expired, token expired, list apis, 202, https status code 202, status code 202, id, id field, box 
-summary: 웹 UI를 통해 제공되는 NetApp 복사 및 동기화 기능은 RESTful API를 통해서도 사용할 수 있습니다. 
+summary: 웹 UI를 통해 제공되는 NetApp Copy and Sync 기능은 RESTful API를 통해서도 사용할 수 있습니다. 
 ---
-= NetApp 복사 및 동기화 API
+= NetApp Copy and Sync API
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,16 +14,16 @@ summary: 웹 UI를 통해 제공되는 NetApp 복사 및 동기화 기능은 RES
 
 
 [role="lead"]
-웹 UI를 통해 제공되는 NetApp 복사 및 동기화 기능은 RESTful API를 통해서도 사용할 수 있습니다.
+웹 UI를 통해 제공되는 NetApp Copy and Sync 기능은 RESTful API를 통해서도 사용할 수 있습니다.
 
 
 
 == 시작하기
 
-Copy and Sync API를 시작하려면 사용자 토큰과 NetApp 콘솔 계정 ID를 얻어야 합니다.  API 호출을 할 때 Authorization 헤더에 토큰과 계정 ID를 추가해야 합니다.
+Copy and Sync API를 시작하려면 사용자 토큰과 NetApp Console 계정 ID를 얻어야 합니다.  API 호출을 할 때 Authorization 헤더에 토큰과 계정 ID를 추가해야 합니다.
 
 .단계
-. NetApp 콘솔에서 사용자 토큰을 얻습니다.
+. NetApp Console 에서 사용자 토큰을 얻습니다.
 +
 [source, http]
 ----
@@ -43,7 +43,7 @@ Body:
 
 NOTE: 클라이언트 ID가 없는 개인 이메일 계정을 사용하는 경우 기본 클라이언트 ID "QC3AgHk6qdbmC7Yyr82ApBwaaJLwRrNO”를 사용할 수 있습니다.
 
-. NetApp 콘솔 계정 ID를 얻으세요.
+. NetApp Console 계정 ID를 얻으세요.
 +
 [source, http]
 ----
@@ -83,7 +83,7 @@ Body: { "name": "databroker1", "type": "AZURE" }
 
 
 .다음은 무엇인가요?
-NetApp 콘솔의 사용자 토큰에는 만료 날짜가 있습니다.  토큰을 새로 고치려면 1단계의 API를 다시 호출해야 합니다.
+NetApp Console 의 사용자 토큰에는 만료 날짜가 있습니다.  토큰을 새로 고치려면 1단계의 API를 다시 호출해야 합니다.
 
 API 응답에는 토큰이 만료되는 시점을 나타내는 "expires_in" 필드가 포함되어 있습니다.
 

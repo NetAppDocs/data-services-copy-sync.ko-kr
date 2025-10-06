@@ -4,7 +4,7 @@ permalink: concept-licensing.html
 keywords: licenses, licensing, subscriptions, annual subscription, paygo, hourly subscription, bluexp 
 summary: 14일 무료 체험 기간이 종료된 후에는 두 가지 방법으로 동기화 관계에 대한 비용을 지불할 수 있습니다.  첫 번째 옵션은 AWS 또는 Azure에 가입하여 사용량에 따라 요금을 지불하거나 연간 요금을 지불하는 것입니다.  두 번째 옵션은 NetApp 에서 직접 라이선스를 구매하는 것입니다. 
 ---
-= NetApp Copy and Sync에 대한 라이선싱 개요
+= NetApp Copy and Sync 에 대한 라이선싱 개요
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,9 @@ summary: 14일 무료 체험 기간이 종료된 후에는 두 가지 방법으�
 
 
 [role="lead"]
-14일 무료 평가판이 종료된 후에는 NetApp 복사 및 동기화 관계에 대한 비용을 두 가지 방법으로 지불할 수 있습니다.  첫 번째 옵션은 AWS 또는 Azure에 가입하여 사용량에 따라 요금을 지불하거나 연간 요금을 지불하는 것입니다.  두 번째 옵션은 NetApp 에서 직접 라이선스를 구매하는 것입니다.
+14일 무료 평가판이 종료된 후에는 NetApp Copy and Sync 관계에 대한 비용을 두 가지 방법으로 지불할 수 있습니다.  첫 번째 옵션은 AWS 또는 Azure에 가입하여 사용량에 따라 요금을 지불하거나 연간 요금을 지불하는 것입니다.  두 번째 옵션은 NetApp 에서 직접 라이선스를 구매하는 것입니다.
 
-라이선스는 NetApp 콘솔이 아닌 NetApp Copy and Sync 또는 해당 웹사이트를 통해 관리해야 합니다.
+라이선스는 NetApp Console 아닌 NetApp Copy and Sync 또는 해당 웹사이트를 통해 관리해야 합니다.
 
 
 
@@ -50,7 +50,7 @@ https://aws.amazon.com/marketplace/pp/B06XX5V3M2["AWS의 연간 가격 보기"^]
 
 이러한 라이선스는 AWS 또는 Azure 구독과 함께 사용할 수 있습니다.  예를 들어, 동기화 관계가 25개라면 라이선스를 사용하여 처음 20개 동기화 관계에 대한 요금을 지불한 다음, 나머지 5개 동기화 관계에 대해서는 AWS 또는 Azure에서 사용량에 따라 요금을 지불할 수 있습니다.
 
-link:task-licensing.html["라이센스를 구매하고 NetApp Copy and Sync에 추가하는 방법을 알아보세요."] .
+link:task-licensing.html["라이센스를 구매하고 NetApp Copy and Sync 에 추가하는 방법을 알아보세요."] .
 
 
 
