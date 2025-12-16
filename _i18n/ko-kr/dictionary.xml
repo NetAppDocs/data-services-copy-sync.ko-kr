@@ -1995,4 +1995,5 @@
   <block id="998375a7e557e86f30bd231c581f357a" category="admonition">Copy and Sync 기능을 사용하여 SMB 데이터를 Cloud Volumes ONTAP 으로 복사할 때 소스 시스템의 파일 및 폴더 소유권이 유지되지 않습니다.  이러한 동작은 복사 및 동기화 기능이 Linux SMB 클라이언트를 사용하기 때문에 발생하는데, 이 클라이언트는 전송 인증에 사용된 사용자 또는 서비스 계정에 소유권을 할당합니다.  접근 제어 목록은 유지될 수 있지만, 소유권 및 감사 정보는 원본 시스템과 다를 수 있습니다. 이는 예상되는 동작입니다.</block>
   <block id="3d2ca821daba65add026b662c8f28f8e" category="paragraph">복사 및 동기화 기능은 SMB ACL(권한)을 유지하지만 파일 또는 폴더의 소유권은 복사하지 않습니다.  SMB ACL 이전 작업에는 소유권 정보가 포함되지 않습니다.</block>
   <block id="0bdd8934a5af74cc1118d4d760ec3c9f" category="paragraph">ACL 외에도 소유권(소유자 및 그룹)을 유지해야 하는 경우 다음을 사용할 수 있습니다.<block ref="56114254c3584cfde1445c406a4953ca" prefix=" " category="inline-code"></block> 명령.  사용<block ref="2c1e0967dfb1849f0af6b01e272eed79" prefix=" " category="inline-code"></block> 플래그는 ACL, 소유권 및 감사 정보를 복사합니다.</block>
+  <block id="35e87b798eb20e7292277632ad38f075" category="paragraph">복사 및 동기화 기능은 **AWS** 및 **Azure**의 마켓플레이스 구독만 지원합니다. Copy and Sync 기능은 Google Cloud Marketplace 구독을 지원하지 않습니다.</block>
 </blocks>
