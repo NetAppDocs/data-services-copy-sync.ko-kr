@@ -23,6 +23,7 @@ NetApp Copy and Sync SMB 공유 간, 그리고 SMB 공유와 개체 스토리지
 
 
 
+[[set-up-copy-and-sync-to-copy-acls]]
 == ACL을 복사하기 위한 복사 및 동기화 설정
 
 관계를 생성할 때 또는 관계를 생성한 후에 설정을 활성화하여 SMB 공유 간, 그리고 SMB 공유와 개체 스토리지 간에 ACL을 복사합니다.
@@ -73,6 +74,7 @@ image:screenshot-sync-tags-metadata.png["개체 스토리지에 복사할 때 �
 
 
 
+[[manually-copy-acls-between-smb-shares]]
 == SMB 공유 간 ACL을 수동으로 복사합니다.
 
 Windows robocopy 명령을 사용하면 SMB 공유 간의 ACL을 수동으로 보존할 수 있습니다.

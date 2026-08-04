@@ -16,10 +16,11 @@ summary: NetApp 직원의 도움을 받아 데이터 브로커의 구성을 조�
 [role="lead"]
 NetApp Copy and Sync 에서 보고서를 만들고 확인하여 NetApp 직원의 도움을 받아 데이터 브로커의 구성을 조정하고 성능을 개선하는 데 사용할 수 있는 정보를 얻으세요.
 
-각 보고서는 동기화 관계의 경로에 대한 심층적인 세부 정보를 제공합니다.  여기에는 디렉토리, 파일, 심볼릭 링크의 수, 파일 크기의 분포, 디렉토리의 깊이와 너비, 수정 시간, 액세스 시간이 포함됩니다.  이는 대시보드에서 사용할 수 있는 동기화 통계와 다릅니다. https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html["동기화를 성공적으로 생성하고 완료"] .
+각 보고서는 동기화 관계의 경로에 대한 자세한 정보를 제공합니다. 여기에는 디렉터리, 파일 및 심볼릭 링크의 수, 파일 크기 분포, 디렉터리의 깊이와 너비, 수정 시간 및 액세스 시간이 포함됩니다. 이는 link:task-creating-relationships.html["동기화를 성공적으로 생성하고 완료"] 후 대시보드에서 확인할 수 있는 동기화 통계와는 다릅니다.
 
 
 
+[[create-reports]]
 == 보고서 만들기
 
 보고서를 생성할 때마다 복사 및 동기화가 경로를 스캔한 다음 세부 정보를 보고서로 컴파일합니다.
@@ -48,6 +49,7 @@ image:screenshot_sync_report_object.gif["경로 항목 수, 객체 크기, 수�
 
 
 
+[[download-reports]]
 == 보고서 다운로드
 
 오프라인에서 보거나 공유할 수 있도록 보고서를 PDF로 다운로드할 수 있습니다.
@@ -64,6 +66,7 @@ image:screenshot-sync-download-report.png["보고서에서 작업 메뉴를 선�
 
 
 
+[[view-report-errors]]
 == 보고서 오류 보기
 
 경로 테이블은 최신 보고서에 오류가 있는지 여부를 식별합니다.  오류는 Copy and Sync가 경로를 스캔할 때 발생한 문제를 나타냅니다.
@@ -88,6 +91,7 @@ image:screenshot_sync_report_errors.gif["오류 수와 오류 열에 있는 작�
 
 
 
+[[delete-reports]]
 == 보고서 삭제
 
 보고서에 수정한 오류가 포함되어 있거나, 보고서가 제거한 동기화 관계와 관련된 경우 해당 보고서를 삭제할 수 있습니다.

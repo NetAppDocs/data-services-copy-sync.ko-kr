@@ -20,18 +20,21 @@ NetApp Copy and Sync 대한 새 데이터 브로커 그룹을 만들 때 Google 
 
 
 
+[[supported-google-cloud-regions]]
 == 지원되는 Google Cloud 지역
 
 모든 지역이 지원됩니다.
 
 
 
+[[root-privileges]]
 == 루트 권한
 
 데이터 브로커 소프트웨어는 Linux 호스트에서 루트로 자동 실행됩니다.  데이터 브로커 작업을 위해서는 루트로 실행해야 합니다.  예를 들어, 주식을 마운트하는 것입니다.
 
 
 
+[[networking-requirements]]
 == 네트워킹 요구 사항
 
 * 데이터 브로커는 포트 443을 통해 복사 및 동기화 작업을 폴링할 수 있도록 아웃바운드 인터넷 연결이 필요합니다.
@@ -46,6 +49,7 @@ Copy and Sync가 Google Cloud에 데이터 브로커를 배포하면 필요한 �
 
 
 
+[[permissions-required-to-deploy-the-data-broker-in-google-cloud]]
 == Google Cloud에 데이터 브로커를 배포하는 데 필요한 권한
 
 데이터 브로커를 배포하는 Google Cloud 사용자에게 다음 권한이 있는지 확인하세요.
@@ -61,6 +65,7 @@ Copy and Sync가 Google Cloud에 데이터 브로커를 배포하면 필요한 �
 ----
 
 
+[[permissions-required-for-the-service-account]]
 == 서비스 계정에 필요한 권한
 
 데이터 브로커를 배포할 때 다음 권한이 있는 서비스 계정을 선택해야 합니다.
@@ -101,6 +106,7 @@ Copy and Sync가 Google Cloud에 데이터 브로커를 배포하면 필요한 �
 
 
 
+[[create-the-data-broker]]
 == 데이터 브로커 생성
 
 새로운 데이터 브로커를 만드는 방법에는 여러 가지가 있습니다.  이 단계에서는 동기화 관계를 생성할 때 Google Cloud에 데이터 브로커를 설치하는 방법을 설명합니다.
@@ -144,6 +150,7 @@ Google Cloud에 데이터 브로커를 배포하고 새로운 동기화 관계�
 
 
 
+[[provide-permissions-to-use-buckets-in-other-google-cloud-projects]]
 == 다른 Google Cloud 프로젝트에서 버킷을 사용할 수 있는 권한 제공
 
 동기화 관계를 생성하고 Google Cloud Storage를 소스 또는 대상으로 선택하면 복사 및 동기화를 통해 데이터 브로커의 서비스 계정에서 사용할 수 있는 버킷을 선택할 수 있습니다.  기본적으로 여기에는 데이터 브로커 서비스 계정과 동일한 프로젝트에 있는 버킷이 포함됩니다.  하지만 필요한 권한을 제공하면 _다른_ 프로젝트에서 버킷을 선택할 수 있습니다.
@@ -163,6 +170,7 @@ Google Cloud에 데이터 브로커를 배포하고 새로운 동기화 관계�
 
 
 
+[[details-about-the-data-broker-vm-instance]]
 == 데이터 브로커 VM 인스턴스에 대한 세부 정보
 
 복사 및 동기화는 다음 구성을 사용하여 Google Cloud에 데이터 브로커를 생성합니다.

@@ -28,6 +28,7 @@ link:concept-licensing.html["라이센스 작동 방식에 대해 자세히 알�
 
 
 
+[[awssubscribe-from-aws]]
 == [[aws]]AWS 구독
 
 AWS를 사용하면 사용량에 따라 비용을 지불하거나 연간으로 지불할 수 있습니다.
@@ -54,6 +55,7 @@ video::796ffd6d-cade-4750-8504-b24c010b225d[panopto]
 
 
 
+[[azuresubscribe-from-azure]]
 == [[azure]]Azure에서 구독
 
 Azure를 사용하면 사용량에 따라 요금을 지불하거나 연간 요금을 지불할 수 있습니다.
@@ -82,6 +84,7 @@ video::a6a39447-b7b1-42f6-9c89-b24c010b21b9[panopto]
 
 
 
+[[licensespurchase-licenses-from-netapp-and-add-them-to-copy-and-sync]]
 == [[라이센스]] NetApp 에서 라이센스를 구매하고 Copy and Sync에 추가합니다.
 
 동기화 관계에 대한 비용을 선불로 지불하려면 하나 이상의 라이선스를 구매하여 Copy and Sync에 추가해야 합니다.
@@ -109,6 +112,7 @@ video::a6a39447-b7b1-42f6-9c89-b24c010b21b9[panopto]
 
 
 
+[[update-a-license]]
 == 라이센스 업데이트
 
 NetApp 에서 구매한 복사 및 동기화 라이선스를 연장한 경우, 새로운 만료 날짜가 복사 및 동기화에서 자동으로 업데이트되지 않습니다.  만료 날짜를 새로 고치려면 라이선스를 다시 추가해야 합니다.  라이선스는 NetApp Console 구독이 아닌 Copy and Sync 또는 해당 웹사이트를 통해 관리해야 합니다.

@@ -18,6 +18,7 @@ NetApp Copy and Sync 클라우드나 사내에 있는 모든 대상으로 데이
 
 
 
+[[netapp-console]]
 == NetApp Console
 
 NetApp Copy and Sync NetApp Console 통해 액세스할 수 있습니다.
@@ -26,10 +27,11 @@ NetApp Console 엔터프라이즈급 온프레미스 및 클라우드 환경 전
 
 NetApp Console 사용하려면 라이선스나 구독이 필요하지 않으며, 스토리지 시스템이나 NetApp 데이터 서비스에 대한 연결을 보장하기 위해 클라우드에 Console 에이전트를 배포해야 할 때만 요금이 부과됩니다. 그러나 콘솔에서 액세스할 수 있는 일부 NetApp 데이터 서비스는 라이선스 기반이거나 구독 기반입니다.
 
-자세히 알아보세요 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp Console"] .
+ https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp Console"]에 대해 자세히 알아보십시오.
 
 
 
+[[how-netapp-copy-and-sync-works]]
 == NetApp Copy and Sync 작동 방식
 
 NetApp Copy and Sync 데이터 브로커 그룹, NetApp Console 통해 사용 가능한 클라우드 기반 인터페이스, 소스 및 대상으로 구성된 SaaS(Software-as-a-Service) 플랫폼입니다.
@@ -44,6 +46,7 @@ NetApp 데이터 브로커 소프트웨어는 소스에서 타겟으로 데이�
 
 
 
+[[supported-storage-types]]
 == 지원되는 저장 유형
 
 복사 및 동기화는 다음과 같은 저장 유형을 지원합니다.
@@ -71,6 +74,7 @@ link:reference-supported-relationships.html["지원되는 동기화 관계 보�
 
 
 
+[[costs]]
 == 소송 비용
 
 Copy and Sync를 사용하는 데에는 리소스 요금과 서비스 요금이라는 두 가지 유형의 비용이 있습니다.

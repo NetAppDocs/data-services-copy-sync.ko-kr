@@ -20,6 +20,7 @@ summary: 회사에 엄격한 보안 정책이 있는 경우 전송 중인 데이
 
 
 
+[[how-data-in-flight-encryption-works]]
 == 전송 중인 데이터 암호화 작동 방식
 
 전송 중 데이터 암호화는 두 데이터 브로커 간 네트워크를 통해 전송되는 NFS 데이터를 암호화합니다.  다음 이미지는 두 개의 NFS 서버와 두 개의 데이터 브로커 간의 관계를 보여줍니다.
@@ -44,6 +45,7 @@ image:diagram_nfs_encryption.gif["두 개의 NFS 서버와 두 개의 데이터 
 
 
 
+[[supported-nfs-versions]]
 == 지원되는 NFS 버전
 
 * NFS 서버의 경우, 전송 중인 데이터 암호화는 NFS 버전 3, 4.0, 4.1 및 4.2에서 지원됩니다.
@@ -52,12 +54,14 @@ image:diagram_nfs_encryption.gif["두 개의 NFS 서버와 두 개의 데이터 
 
 
 
+[[proxy-server-limitation]]
 == 프록시 서버 제한
 
 암호화된 동기화 관계를 생성하면 암호화된 데이터는 HTTPS를 통해 전송되며 프록시 서버를 통해 라우팅될 수 없습니다.
 
 
 
+[[what-youll-need-to-get-started]]
 == 시작하는 데 필요한 것
 
 다음 사항을 꼭 확인하세요.
@@ -85,6 +89,7 @@ image:diagram_nfs_encryption.gif["두 개의 NFS 서버와 두 개의 데이터 
 
 
 
+[[sync-nfs-data-using-data-in-flight-encryption]]
 == 데이터 전송 중 암호화를 사용하여 NFS 데이터 동기화
 
 두 NFS 서버 간 또는 Azure NetApp Files 간에 새로운 동기화 관계를 만들고, 진행 중 암호화 옵션을 활성화한 다음, 화면의 지시를 따릅니다.

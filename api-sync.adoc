@@ -18,6 +18,7 @@ summary: 웹 UI를 통해 제공되는 NetApp Copy and Sync 기능은 RESTful AP
 
 
 
+[[get-started]]
 == 시작하기
 
 Copy and Sync API를 시작하려면 사용자 토큰과 NetApp Console 계정 ID를 얻어야 합니다.  API 호출을 할 때 Authorization 헤더에 토큰과 계정 ID를 추가해야 합니다.
@@ -89,6 +90,7 @@ API 응답에는 토큰이 만료되는 시점을 나타내는 "expires_in" 필�
 
 
 
+[[use-list-apis]]
 == 목록 API 사용
 
 목록 API는 비동기 API이므로 결과가 즉시 반환되지 않습니다(예: `GET /data-brokers/{id}/list-nfs-export-folders` 그리고 `GET /data-brokers/{id}/list-s3-buckets` ).  서버에서 보내는 유일한 응답은 HTTP 상태 202입니다.  실제 결과를 얻으려면 다음을 사용해야 합니다. `GET /messages/client` API.
@@ -185,6 +187,7 @@ x-account-id: <accountId>
 ----
 
 
+[[api-reference]]
 == API 참조
 
 각 복사 및 동기화 API에 대한 설명서는 다음에서 제공됩니다. https://api.cloudsync.netapp.com/docs[] .

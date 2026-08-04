@@ -34,8 +34,8 @@ NetApp Console 시작했어야 합니다. 여기에는 로그인, 계정 설정,
 Cloud Volumes ONTAP, 온프레미스 ONTAP 클러스터 및 Amazon FSx for ONTAP 에는 콘솔 에이전트가 필요합니다.
 
 [role="quick-margin-list"]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp Console 을 시작하는 방법을 알아보세요"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["콘솔 에이전트에 대해 자세히 알아보세요"^]
+* https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["NetApp Console 을 시작하는 방법을 알아보세요"^]
+* https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["콘솔 에이전트에 대해 자세히 알아보세요"^]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["둘"]소스와 타겟을 준비하세요

@@ -20,18 +20,21 @@ NetApp Copy and Sync 대한 새 데이터 브로커 그룹을 만들 때 VNet의
 
 
 
+[[supported-azure-regions]]
 == 지원되는 Azure 지역
 
 중국, 미국 정부, 미국 국방부 지역을 제외한 모든 지역이 지원됩니다.
 
 
 
+[[root-privileges]]
 == 루트 권한
 
 데이터 브로커 소프트웨어는 Linux 호스트에서 루트로 자동 실행됩니다.  데이터 브로커 작업을 위해서는 루트로 실행해야 합니다.  예를 들어, 주식을 마운트하는 것입니다.
 
 
 
+[[networking-requirements]]
 == 네트워킹 요구 사항
 
 * 데이터 브로커는 포트 443을 통해 Copy and Sync 서비스에 대한 작업을 폴링할 수 있도록 아웃바운드 인터넷 연결이 필요합니다.
@@ -46,64 +49,15 @@ Copy and Sync가 Azure에 데이터 브로커를 배포하면 필요한 아웃�
 
 
 
+[[permissions-required-to-deploy-the-data-broker-in-azure]]
 == Azure에서 데이터 브로커를 배포하는 데 필요한 권한
 
 데이터 브로커를 배포하는 데 사용하는 Azure 사용자 계정에 다음 권한이 있는지 확인하세요.
 
-[source, json]
-----
-{
-    "Name": "Azure Data Broker",
-    "Actions": [
-					"Microsoft.Resources/subscriptions/read",
-                    "Microsoft.Resources/deployments/operationstatuses/read",
-                    "Microsoft.Resources/subscriptions/locations/read",
-                    "Microsoft.Network/networkInterfaces/read",
-                    "Microsoft.Network/virtualNetworks/subnets/read",
-                    "Microsoft.Resources/subscriptions/resourceGroups/write",
-                    "Microsoft.Resources/subscriptions/resourceGroups/delete",
-                    "Microsoft.Resources/deployments/write",
-                    "Microsoft.Resources/deployments/validate/action",
-                    "Microsoft.Resources/deployments/operationStatuses/read",
-                    "Microsoft.Resources/deployments/cancel/action",
-                    "Microsoft.Compute/virtualMachines/read",
-                    "Microsoft.Compute/virtualMachines/delete",
-                    "Microsoft.Compute/disks/delete",
-                    "Microsoft.Network/networkInterfaces/delete",
-                    "Microsoft.Network/publicIPAddresses/delete",
-                    "Microsoft.Network/networkSecurityGroups/securityRules/delete",
-                    "Microsoft.Resources/subscriptions/resourceGroups/write",
-                    "Microsoft.Compute/virtualMachines/delete",
-                    "Microsoft.Network/networkSecurityGroups/write",
-                    "Microsoft.Network/networkSecurityGroups/join/action",
-                    "Microsoft.Compute/disks/write",
-                    "Microsoft.Network/networkInterfaces/write",
-                    "Microsoft.Network/virtualNetworks/read",
-                    "Microsoft.Network/publicIPAddresses/write",
-                    "Microsoft.Compute/virtualMachines/write",
-                    "Microsoft.Compute/virtualMachines/extensions/write",
-                    "Microsoft.Resources/deployments/read",
-                    "Microsoft.Network/networkSecurityGroups/read",
-                    "Microsoft.Network/publicIPAddresses/read",
-                    "Microsoft.Network/virtualNetworks/subnets/join/action",
-                    "Microsoft.Network/publicIPAddresses/join/action",
-                    "Microsoft.Network/networkInterfaces/join/action",
-                    "Microsoft.Storage/storageAccounts/read",
-                    "Microsoft.EventGrid/systemTopics/eventSubscriptions/write",
-                    "Microsoft.EventGrid/systemTopics/eventSubscriptions/read",
-                    "Microsoft.EventGrid/systemTopics/eventSubscriptions/delete",
-                    "Microsoft.EventGrid/systemTopics/eventSubscriptions/getFullUrl/action",
-                    "Microsoft.EventGrid/systemTopics/eventSubscriptions/getDeliveryAttributes/action",
-                    "Microsoft.EventGrid/systemTopics/read",
-                    "Microsoft.EventGrid/systemTopics/write",
-                    "Microsoft.EventGrid/systemTopics/delete",
-                    "Microsoft.EventGrid/eventSubscriptions/write",
-                    "Microsoft.Storage/storageAccounts/write"
-                    "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/read"
-                    "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/write"
-                    "Microsoft.Network/networkSecurityGroups/securityRules/read",
-        	        "Microsoft.Network/networkSecurityGroups/read",
-----
+[]
+====
+{ "Name": "Azure Data Broker", "Actions": [ "Microsoft.Resources/subscriptions/read", "Microsoft.Resources/deployments/operationstatuses/read", "Microsoft.Resources/subscriptions/locations/read", "Microsoft.Network/networkInterfaces/read", "Microsoft.Network/virtualNetworks/subnets/read", "Microsoft.Resources/subscriptions/resourceGroups/write", "Microsoft.Resources/subscriptions/resourceGroups/delete", "Microsoft.Resources/deployments/write", "Microsoft.Resources/deployments/validate/action", "Microsoft.Resources/deployments/operationStatuses/read", "Microsoft.Resources/deployments/cancel/action", "Microsoft.Compute/virtualMachines/read", "Microsoft.Compute/virtualMachines/delete", "Microsoft.Compute/disks/delete", "Microsoft.Network/networkInterfaces/delete", "Microsoft.Network/publicIPAddresses/delete", "Microsoft.Network/networkSecurityGroups/securityRules/delete", "Microsoft.Resources/subscriptions/resourceGroups/write", "Microsoft.Compute/virtualMachines/delete", "Microsoft.Network/networkSecurityGroups/write", "Microsoft.Network/networkSecurityGroups/join/action", "Microsoft.Compute/disks/write", "Microsoft.Network/networkInterfaces/write", "Microsoft.Network/virtualNetworks/read", "Microsoft.Network/publicIPAddresses/write", "Microsoft.Compute/virtualMachines/write", "Microsoft.Compute/virtualMachines/extensions/write", "Microsoft.Resources/deployments/read", "Microsoft.Network/networkSecurityGroups/read", "Microsoft.Network/publicIPAddresses/read", "Microsoft.Network/virtualNetworks/subnets/join/action", "Microsoft.Network/publicIPAddresses/join/action", "Microsoft.Network/networkInterfaces/join/action", "Microsoft.Storage/storageAccounts/read", "Microsoft.EventGrid/systemTopics/eventSubscriptions/write", "Microsoft.EventGrid/systemTopics/eventSubscriptions/read", "Microsoft.EventGrid/systemTopics/eventSubscriptions/delete", "Microsoft.EventGrid/systemTopics/eventSubscriptions/getFullUrl/action", "Microsoft.EventGrid/systemTopics/eventSubscriptions/getDeliveryAttributes/action", "Microsoft.EventGrid/systemTopics/read", "Microsoft.EventGrid/systemTopics/write", "Microsoft.EventGrid/systemTopics/delete", "Microsoft.EventGrid/eventSubscriptions/write", "Microsoft.Storage/storageAccounts/write" "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/read" "Microsoft.MarketplaceOrdering/offertypes/publishers/offers/plans/agreements/write" "Microsoft.Network/networkSecurityGroups/securityRules/read", "Microsoft.Network/networkSecurityGroups/read",
+
 ....
     ],
     "NotActions": [],
@@ -112,44 +66,42 @@ Copy and Sync가 Azure에 데이터 브로커를 배포하면 필요한 아웃�
     "IsCustom": "true"
 }
 ....
-메모:
+====
+다음 권한은 Azure에서 다른 클라우드 스토리지 위치로의 동기화 관계에서 link:task-creating-relationships.html["연속 동기화 설정"]을(를) 활성화하려는 경우에만 필요합니다.
 
-. 다음 권한은 다음을 활성화하려는 경우에만 필요합니다. https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html#settings["연속 동기화 설정"] Azure에서 다른 클라우드 저장소 위치로의 동기화 관계에 대해:
-+
-** 'Microsoft.Storage/storageAccounts/read',
-** 'Microsoft.EventGrid/systemTopics/eventSubscriptions/write',
-** 'Microsoft.EventGrid/systemTopics/eventSubscriptions/read',
-** 'Microsoft.EventGrid/systemTopics/eventSubscriptions/삭제',
-** 'Microsoft.EventGrid/systemTopics/eventSubscriptions/getFullUrl/action',
-** 'Microsoft.EventGrid/systemTopics/eventSubscriptions/getDeliveryAttributes/action',
-** 'Microsoft.EventGrid/systemTopics/read',
-** 'Microsoft.EventGrid/systemTopics/write',
-** 'Microsoft.EventGrid/systemTopics/삭제',
-** 'Microsoft.EventGrid/eventSubscriptions/write',
-** 'Microsoft.Storage/storageAccounts/write'
+* 'Microsoft.Storage/storageAccounts/read',
+* 'Microsoft.EventGrid/systemTopics/eventSubscriptions/write',
+* 'Microsoft.EventGrid/systemTopics/eventSubscriptions/read',
+* 'Microsoft.EventGrid/systemTopics/eventSubscriptions/삭제',
+* 'Microsoft.EventGrid/systemTopics/eventSubscriptions/getFullUrl/action',
+* 'Microsoft.EventGrid/systemTopics/eventSubscriptions/getDeliveryAttributes/action',
+* 'Microsoft.EventGrid/systemTopics/read',
+* 'Microsoft.EventGrid/systemTopics/write',
+* 'Microsoft.EventGrid/systemTopics/삭제',
+* 'Microsoft.EventGrid/eventSubscriptions/write',
+* 'Microsoft.Storage/storageAccounts/write'
 
 
-+
-또한 Azure에서 Continuous Sync를 구현하려는 경우 할당 가능한 범위를 리소스 그룹 범위가 아닌 구독 범위로 설정해야 합니다.
+Azure에서 지속적인 동기화를 구현하려면 할당 가능한 범위를 리소스 그룹 범위가 아닌 구독 범위로 설정해야 합니다.
 
-. 다음 권한은 데이터 브로커 생성에 대한 보안을 직접 선택하려는 경우에만 필요합니다.
-+
-** "Microsoft.Network/networkSecurityGroups/securityRules/read"
-** "Microsoft.Network/networkSecurityGroups/read"
+다음 권한은 데이터 브로커 생성에 대한 보안을 직접 선택하려는 경우에만 필요합니다.
+
+* 'Microsoft.Network/networkSecurityGroups/securityRules/read'
+* 'Microsoft.Network/networkSecurityGroups/read'
 
 
 
 
-
-
+[[authentication-method]]
 == 인증 방법
 
-데이터 브로커를 배포할 때 가상 머신에 대한 인증 방법(암호 또는 SSH 공개-개인 키 쌍)을 선택해야 합니다.
+데이터 브로커를 배포할 때 가상 머신에 사용할 인증 방법을 선택해야 합니다. 암호 또는 SSH 공개-개인 키 쌍 중에서 선택할 수 있습니다.
 
-키 쌍 생성에 대한 도움말은 다음을 참조하세요. https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys["Azure 설명서: Azure에서 Linux VM에 대한 SSH 공개-개인 키 쌍 만들기 및 사용"^] .
+키 쌍 생성에 대한 도움말은 link:https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys["Azure 설명서: Azure에서 Linux VM에 대한 SSH 공개-개인 키 쌍 만들기 및 사용"^]을 참조하십시오.
 
 
 
+[[create-the-data-broker]]
 == 데이터 브로커 생성
 
 새로운 데이터 브로커를 만드는 방법에는 여러 가지가 있습니다.  이 단계에서는 동기화 관계를 만들 때 Azure에 데이터 브로커를 설치하는 방법을 설명합니다.
@@ -211,6 +163,7 @@ URL에 표시된 대로, 앱 URL은 https://cloudsync.netapp.com 이고 애플�
 ****
 
 
+[[details-about-the-data-broker-vm]]
 == 데이터 브로커 VM에 대한 세부 정보
 
 복사 및 동기화는 다음 구성을 사용하여 Azure에 데이터 브로커를 만듭니다.
