@@ -639,7 +639,6 @@
   <block id="881cb6b58f9fdb2bde0b3c90f7cbfce8" category="paragraph"><block ref="881cb6b58f9fdb2bde0b3c90f7cbfce8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6a7470fea96bed8b75bf17e5f07e01a4" category="list-text">[[설정]]설정 페이지에서 소스 파일과 폴더가 대상 위치에서 동기화되고 유지되는 방식을 정의합니다.</block>
   <block id="25f7347236b51a5eae4ba01a7862cb55" category="list-text">일정</block>
-  <block id="3e8e8a2afdd515355f098433677b9baa" category="list-text">향후 동기화를 위해 반복 일정을 선택하거나 동기화 일정을 끕니다.  최대 1분마다 데이터를 동기화하도록 관계를 예약할 수 있습니다.</block>
   <block id="64b10e9eb890594a5a1756353aca634b" category="list-text">동기화 시간 초과</block>
   <block id="3231a933fa5fac58c16e6d443f352009" category="list-text">동기화가 지정된 분, 시간 또는 일 수 내에 완료되지 않을 경우 복사 및 동기화가 데이터 동기화를 취소해야 하는지 여부를 정의합니다.</block>
   <block id="a274f4d4670213a9045ce258c6c56b80" category="list-text">알림</block>
@@ -1985,4 +1984,6 @@
   <block id="23239688169f4a4cc657d5ef5443f34b" category="paragraph"><block ref="23239688169f4a4cc657d5ef5443f34b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7bed8c71bfbfa7b7847f7029d0d74ccc" category="paragraph"><block ref="7bed8c71bfbfa7b7847f7029d0d74ccc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6c786f9f2baf8236d6ee8e864e78e415" category="list-text"><block ref="6c786f9f2baf8236d6ee8e864e78e415" category="inline-link-rx"></block></block>
+  <block id="46a9d70b85a901c8a4c1eaf05d1a35db" category="admonition">일정을 설정할 때 *다음 동기화가 자동으로 시작되는 시간*을 입력해야 합니다. Copy and Sync는 현지 시간이 아닌 *UTC*를 사용합니다. 따라서 예약 시간을 설정할 때 이 점을 고려하십시오.</block>
+  <block id="240f236bfdc0495169ba6aec758c6dd2" category="list-text">향후 동기화를 위한 반복 일정을 선택하거나 동기화 일정을 해제할 수 있습니다. 데이터를 최소 1분 간격으로 동기화하도록 관계를 예약할 수 있습니다. 일정은 시간별 및 일별 빈도로도 설정할 수 있습니다.</block>
 </blocks>
