@@ -4,7 +4,7 @@ permalink: task-managing-relationships.html
 keywords: sync, immediate, now, schedule, minutes, hours, on, off, delete, group, accelerate, accelerating, grouping, multiple data brokers, sync now, turn off, turn on, sync schedule, settings, change settings, recently modified files, delete files on target, retries, retry, file types, exclude file type, include file type, delete relationship 
 summary: 데이터를 즉시 동기화하고, 일정을 변경하는 등 언제든지 동기화 관계를 관리할 수 있습니다. 
 ---
-= NetApp Copy and Sync 에서 동기화 관계 관리
+= NetApp Copy and Sync에서 동기화 관계 관리
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

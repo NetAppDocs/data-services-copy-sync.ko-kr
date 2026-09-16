@@ -90,7 +90,6 @@
   <block id="6b130e03ee8c8d322a6174a591d2b774" category="inline-link-macro">라이선싱이 어떻게 작동하는지 알아보세요</block>
   <block id="3b1417e2cc8a651004ff0099ad870a73" category="paragraph"><block ref="e8ff8b95d6e71d0badc3862de8130ad6" category="inline-link-macro-rx"></block> .</block>
   <block id="97ff8a17f533b6d33b6dd9059ff062e9" category="summary">14일 무료 체험 기간이 종료된 후에는 두 가지 방법으로 동기화 관계에 대한 비용을 지불할 수 있습니다.  첫 번째 옵션은 AWS 또는 Azure에 가입하여 사용량에 따라 요금을 지불하거나 연간 요금을 지불하는 것입니다.  두 번째 옵션은 NetApp 에서 직접 라이선스를 구매하는 것입니다.</block>
-  <block id="92e6ea479d1d6dcd56315c41463d9c80" category="doc">NetApp Copy and Sync 에 대한 라이선싱 개요</block>
   <block id="8fb37e6d377a8a9b95cc0a3d7442751a" category="paragraph">14일 무료 평가판이 종료된 후에는 NetApp Copy and Sync 관계에 대한 비용을 두 가지 방법으로 지불할 수 있습니다.  첫 번째 옵션은 AWS 또는 Azure에 가입하여 사용량에 따라 요금을 지불하거나 연간 요금을 지불하는 것입니다.  두 번째 옵션은 NetApp 에서 직접 라이선스를 구매하는 것입니다.</block>
   <block id="5007e6fc0051f0461fcf883a08ac43be" category="paragraph">라이선스는 NetApp Console 아닌 NetApp Copy and Sync 또는 해당 웹사이트를 통해 관리해야 합니다.</block>
   <block id="f856f3b97c80815883c23bfe0ce6d8c2" category="section-title">마켓플레이스 구독</block>
@@ -123,7 +122,6 @@
   <block id="ca4c3bf9d403da9e2d60487daa5822a4" category="paragraph">이러한 자격 증명은 항상 데이터 브로커 자체에 직접 저장됩니다.  데이터 브로커는 온프레미스든 클라우드 계정이든 네트워크의 머신에 상주합니다.  자격 증명은 NetApp 에 ​​제공되지 않습니다.</block>
   <block id="91d94bcb5137ebeaee0b1824fb283f72" category="paragraph">자격 증명은 HashiCorp Vault를 사용하여 데이터 브로커 머신에서 로컬로 암호화됩니다.</block>
   <block id="1e7c04d680d075da65bdb418593cbd71" category="summary">포럼, 채팅 서비스, 비디오 등 다양한 리소스를 통해 NetApp Copy and Sync 대한 도움을 받고 자세한 정보를 찾아볼 수 있습니다.</block>
-  <block id="b5ff8c21b9626811ebbac10d4557b5fc" category="doc">NetApp Copy and Sync 기술 FAQ</block>
   <block id="a0d932b5085e493a71dbcdcc11a705b4" category="paragraph">이 FAQ는 질문에 대한 빠른 답변을 찾는 데 도움이 될 수 있습니다.</block>
   <block id="cb59b87e00d11222bfd9159d0d23836f" category="section-title">시작하기</block>
   <block id="b63a0d346daefdd92757cc99e69565e3" category="paragraph">다음 질문은 NetApp Copy and Sync 시작하는 데 관한 것입니다.</block>
@@ -328,7 +326,6 @@
   <block id="580e905670d084cfe8e8e4ce2cd2899b" category="list-text">Azure 정부 지역</block>
   <block id="ae54a5c026f31ada088992587d92cb3a" category="list-text">중국</block>
   <block id="f27a844031a45699c4da562fbbdaa243" category="summary">NetApp Copy and Sync 위한 네트워킹에는 데이터 브로커 그룹과 소스 및 대상 위치 간의 연결, 그리고 포트 443을 통한 데이터 브로커의 아웃바운드 인터넷 연결이 포함됩니다.</block>
-  <block id="f85f123b9db97e81827ef0ea7abdf217" category="doc">NetApp Copy and Sync 대한 네트워킹 개요</block>
   <block id="1ccbb3a00a8670ff34e71787c69058b9" category="section-title">데이터 브로커 위치</block>
   <block id="42c5f165329383a0397894e0d024ef6c" category="paragraph">데이터 브로커 그룹은 클라우드나 회사 내부에 설치된 하나 이상의 데이터 브로커로 구성됩니다.</block>
   <block id="f3e76ce6c2086bf4e3334c3b429897f4" category="section-title">클라우드의 데이터 브로커</block>
@@ -386,7 +383,6 @@
   <block id="fd0cb271f0ac093ecb033a2bfea34fbd" category="paragraph">문제 해결을 위해 로그를 다운로드하려면 웹 브라우저가 다음 엔드포인트에 액세스해야 합니다.</block>
   <block id="c964e3aec545a38db906e6bb0b6a705f" category="paragraph">logs.cloudsync.netapp.com:443</block>
   <block id="f549fa5a7b8a70265d3f6f6fc5ae1943" category="summary">소스와 타겟이 다음 요구 사항을 충족하는지 확인하세요.</block>
-  <block id="bbb01ce9ba95b7a97c2f263c4272225c" category="doc">NetApp Copy and Sync 에서 소스와 대상을 준비합니다.</block>
   <block id="f7890760d0c96fe50a092d3ac5715549" category="paragraph">NetApp Copy and Sync 에서 소스와 대상이 다음 요구 사항을 충족하는지 확인하세요.</block>
   <block id="41413218d6e0e0f3841260f7834a57b2" category="list-text">NetApp 소스, 대상 및 데이터 브로커를 구성하여 NTP(네트워크 시간 프로토콜) 서비스를 사용할 것을 권장합니다.  세 가지 구성 요소 간의 시간 차이는 5분을 초과해서는 안 됩니다.</block>
   <block id="48803a619ce06c74ae2204113ce8b389" category="section-title">대상 디렉토리</block>
@@ -715,7 +711,6 @@
   <block id="cf17244df6ede19648e8ce26d30c4ba0" category="paragraph"><block ref="cf17244df6ede19648e8ce26d30c4ba0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="022833d135f7e7e0b284d5b6cbc1d6d3" category="inline-link">NetApp Data Classification 에서 동기화 관계를 시작하는 방법을 알아보세요.</block>
   <block id="7b5f232088930bb6c4dd524b1ad8afc7" category="summary">Amazon S3, Azure 또는 Google Cloud 자격 증명이 필요한 동기화 관계를 만드는 경우 NetApp Copy and Sync 사용자 인터페이스 또는 API를 통해 해당 자격 증명을 지정해야 합니다.  또 다른 방법은 데이터 브로커를 설정하여 외부 HashiCorp Vault에서 직접 자격 증명에 액세스하는 것입니다.</block>
-  <block id="c83f13bb91cc75ab9fba517d4f405555" category="doc">NetApp Copy and Sync 에서 외부 HashiCorp Vault를 사용하도록 데이터 브로커 그룹 설정</block>
   <block id="7373b58f3100ed43d9b97a7f9e21546c" category="paragraph">Amazon S3, Azure 또는 Google Cloud 자격 증명이 필요한 동기화 관계를 만드는 경우 NetApp Copy and Sync 사용자 인터페이스 또는 API를 통해 해당 자격 증명을 지정해야 합니다.  또 다른 방법은 데이터 브로커 그룹을 설정하여 외부 HashiCorp Vault에서 직접 자격 증명(또는 _비밀_)에 액세스하는 것입니다.</block>
   <block id="e3889cfbde291df60959080b6d5b1432" category="paragraph">이 기능은 Amazon S3, Azure 또는 Google Cloud 자격 증명이 필요한 동기화 관계를 갖춘 Copy and Sync API를 통해 지원됩니다.</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">하나</block>
@@ -1024,7 +1019,6 @@
   <block id="a6c9e3a7671c1fd9d7328c3be5d107b5" category="list-text">JSON 파일</block>
   <block id="da71e727ce602ce0df332bf7acd04f2b" category="list-text">이것은 당신이 준비해야 할 서비스 계정 키가 포함된 JSON 파일입니다.<block ref="8e7eb0db1ee4fd6a97230ce733e6c0b1" category="inline-xref-macro-rx"></block> .</block>
   <block id="febdb5376a041b31f655e631de8dd5d8" category="summary">14일 무료 체험 기간이 종료된 후에는 두 가지 방법으로 동기화 관계에 대한 비용을 지불할 수 있습니다.  첫 번째 옵션은 사용량에 따라 요금을 지불하는 것입니다.  두 번째 옵션은 NetApp 에서 직접 라이선스를 구매하는 것입니다.</block>
-  <block id="141c29d3014c9bfaa5f6ffd800376869" category="doc">NetApp Copy and Sync 무료 평가판이 종료된 후 동기화 관계에 대한 비용을 지불하세요.</block>
   <block id="7e70bb47069a219e0719dc79d80e13d5" category="paragraph">NetApp Copy and Sync 14일 무료 평가판이 종료된 후에는 동기화 관계에 대한 비용을 두 가지 방법으로 지불할 수 있습니다.  첫 번째 옵션은 AWS 또는 Azure에 가입하여 사용량에 따라 요금을 지불하거나 연간 요금을 지불하는 것입니다.  두 번째 옵션은 NetApp 에서 직접 라이선스를 구매하는 것입니다.</block>
   <block id="97a214da03586723b3eda5c2057276c9" category="paragraph">AWS Marketplace나 Azure Marketplace에서 구독할 수 있습니다.  두 곳 모두에서 구독할 수는 없습니다.</block>
   <block id="ecc0dfd6f3ae02a7910e95f1905624ce" category="paragraph">마켓플레이스 구독을 통해 NetApp 라이선스를 사용할 수 있습니다.  예를 들어, 동기화 관계가 25개라면 라이선스를 사용하여 처음 20개 동기화 관계에 대한 요금을 지불한 다음, 나머지 5개 동기화 관계에 대해서는 AWS 또는 Azure에서 사용량에 따라 요금을 지불할 수 있습니다.</block>
@@ -1199,7 +1193,6 @@
   <block id="826f8292d9dd1df0d5e3440a37c5015b" category="list-text">확인하려면 그룹 이름을 입력하고 *그룹 삭제*를 선택하세요.</block>
   <block id="0aaf5c6768c60c69298adc3572562a26" category="paragraph">복사 및 동기화는 데이터 브로커를 제거하고 그룹을 삭제합니다.</block>
   <block id="b7313c752ca12081edfba2212c0cc2e4" category="summary">데이터를 즉시 동기화하고, 일정을 변경하는 등 언제든지 동기화 관계를 관리할 수 있습니다.</block>
-  <block id="e251a48c15e2586d786a259c5b6bd567" category="doc">NetApp Copy and Sync 에서 동기화 관계 관리</block>
   <block id="5098dff32603bde98da154f57d0f7e2d" category="paragraph">NetApp Copy and Sync 에서 데이터를 즉시 동기화하고, 일정을 변경하는 등 언제든지 동기화 관계를 관리할 수 있습니다.</block>
   <block id="3751024f8814dd0f9cc7022c63dd219d" category="section-title">즉각적인 데이터 동기화를 수행합니다.</block>
   <block id="10b4a486c3639ec1166b66b77215e8c6" category="paragraph">다음에 예약된 동기화를 기다리지 않고도 소스와 대상 간에 데이터를 즉시 동기화할 수 있습니다.</block>
@@ -1256,7 +1249,6 @@
   <block id="a06cbdd471532709a20804cd9a60cf7b" category="list-text">삭제하려는 동기화 관계를 선택하고, *삭제*를 선택한 다음, 다시 *삭제*를 선택하여 확인합니다.</block>
   <block id="8c25365da18b18c4181ac53c1681129b" category="paragraph">복사 및 동기화는 동기화 관계를 삭제합니다.</block>
   <block id="f68b92ee815675ae3018eca060b553b7" category="summary">NetApp 직원의 도움을 받아 데이터 브로커의 구성을 조정하고 성능을 개선하는 데 사용할 수 있는 정보를 얻기 위해 보고서를 만들고 확인하세요.</block>
-  <block id="6cf864181e16eb926d1c763b77b4a825" category="doc">NetApp Copy and Sync 에서 구성을 조정하기 위한 보고서를 만들고 봅니다.</block>
   <block id="8db5cdc5f9dd2eb576dcaed8d44080cd" category="paragraph">NetApp Copy and Sync 에서 보고서를 만들고 확인하여 NetApp 직원의 도움을 받아 데이터 브로커의 구성을 조정하고 성능을 개선하는 데 사용할 수 있는 정보를 얻으세요.</block>
   <block id="b9f1a0da291ab3c6b115c407d28d1ab9" category="inline-link">동기화를 성공적으로 생성하고 완료</block>
   <block id="ef7a7b1bec08bef324977926c1fc910c" category="section-title">보고서 만들기</block>
@@ -1292,7 +1284,6 @@
   <block id="8f678ca452a56dc17c7c9fc13e2e5f36" category="list-text">*보고서 작업* 열에서 경로에 대한 작업 메뉴를 선택하고 *마지막 보고서 삭제* 또는 *모든 보고서 삭제*를 선택합니다.</block>
   <block id="4051a60e091a5882a67c28985f8c22c7" category="list-text">보고서를 삭제할지 확인하세요.</block>
   <block id="71904eaffc2ec470e49ce1a710f5e878" category="summary">회사에 엄격한 보안 정책이 있는 경우 전송 중인 데이터 암호화를 사용하여 서로 다른 네트워크에 있는 NFS 서버 간에 데이터를 동기화하세요.</block>
-  <block id="5f1ab66c45896f6843b43ee46d7ae89c" category="doc">NetApp Copy and Sync 에서 전송 중 데이터 암호화를 사용하여 NFS 데이터 동기화</block>
   <block id="8f58b27b3c5fa8fe0f9512452224e9da" category="paragraph">회사에 엄격한 보안 정책이 있는 경우 NetApp Copy and Sync 의 전송 중 데이터 암호화를 사용하여 NFS 데이터를 동기화할 수 있습니다.  이 기능은 NFS 서버에서 다른 NFS 서버로, Azure NetApp Files 에서 Azure NetApp Files 로 지원됩니다.</block>
   <block id="81c917d52736001d7efd43b0f0ddc92c" category="paragraph">예를 들어, 서로 다른 네트워크에 있는 두 개의 NFS 서버 간에 데이터를 동기화하고 싶을 수 있습니다.  또는 Azure NetApp Files 에서 서브넷이나 지역 간에 데이터를 안전하게 전송해야 할 수도 있습니다.</block>
   <block id="d6dc650d0d220e29e9345f6a653d7ec3" category="section-title">전송 중인 데이터 암호화 작동 방식</block>
@@ -1358,7 +1349,6 @@
   <block id="39cd9e3fa50eeb2b66a750a04c154460" category="paragraph"><block ref="39cd9e3fa50eeb2b66a750a04c154460" category="inline-image-macro-rx" type="image"></block></block>
   <block id="433ce1d0435ebad28cd42f8734e96bad" category="paragraph">복사 및 동기화를 통해 새로운 동기화 관계가 생성됩니다.  완료되면 *대시보드에서 보기*를 선택하여 새 관계에 대한 세부 정보를 확인하세요.</block>
   <block id="199c7ab26dac1d8df30cb6cd16e57658" category="summary">NetApp Copy and Sync 사용하여 개체 스토리지 간에 데이터를 동기화하려는 경우(예: Amazon S3에서 Azure Blob으로) 동기화 관계를 만들기 전에 데이터 브로커 그룹을 준비해야 합니다.</block>
-  <block id="1eef824263d82ff0f8415403e0b2e89f" category="doc">NetApp Copy and Sync 에서 개체 스토리지 간 데이터를 동기화하기 위한 데이터 브로커 준비</block>
   <block id="a0be1e9cf521352c38fac7843ecd8424" category="paragraph">NetApp Copy and Sync 에서 개체 스토리지 간에 데이터를 동기화하려는 경우(예: Amazon S3에서 Azure Blob으로) 동기화 관계를 만들기 전에 데이터 브로커 그룹을 준비해야 합니다.</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">이 작업에 관하여</block>
   <block id="8b29cf1534de96e7d8703b38dbc8b848" category="paragraph">데이터 브로커 그룹을 준비하려면 스캐너 구성을 수정해야 합니다.  구성을 수정하지 않으면 이 동기화 관계에서 성능 문제가 발생할 수 있습니다.</block>
@@ -1854,7 +1844,6 @@
   <block id="411af02bdc9672ad2ee32883bb960a04" category="list-text">데이터 브로커의 이름을 입력한 다음 *Continue*를 선택합니다.</block>
   <block id="e75a211b2366ec05af877ea76987f1de" category="paragraph">안내 페이지가 로드되면 설치 프로그램을 다운로드할 수 있는 고유 링크가 포함된 안내를 따르십시오.</block>
   <block id="97ee9add392d14ccabb3000701440c2d" category="list-text">*AWS*, *Google Cloud* 또는 둘 다에 대한 액세스를 활성화하도록 선택합니다.</block>
-  <block id="dd4b35c3c87be83b2116adbebed5333d" category="doc">NetApp Copy and Sync 지원 등록</block>
   <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7019a39846e9a2c7f7a80eaba91e4a41" category="paragraph"><block ref="7019a39846e9a2c7f7a80eaba91e4a41" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">이는 시스템에서 생성된 ID로, 사용자의 이메일 주소와 연결됩니다. *NSS 관리* 페이지의 <block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> 메뉴에서 사용자의 이메일 주소를 확인할 수 있습니다.</block>
@@ -1986,4 +1975,15 @@
   <block id="6c786f9f2baf8236d6ee8e864e78e415" category="list-text"><block ref="6c786f9f2baf8236d6ee8e864e78e415" category="inline-link-rx"></block></block>
   <block id="46a9d70b85a901c8a4c1eaf05d1a35db" category="admonition">일정을 설정할 때 *다음 동기화가 자동으로 시작되는 시간*을 입력해야 합니다. Copy and Sync는 현지 시간이 아닌 *UTC*를 사용합니다. 따라서 예약 시간을 설정할 때 이 점을 고려하십시오.</block>
   <block id="240f236bfdc0495169ba6aec758c6dd2" category="list-text">향후 동기화를 위한 반복 일정을 선택하거나 동기화 일정을 해제할 수 있습니다. 데이터를 최소 1분 간격으로 동기화하도록 관계를 예약할 수 있습니다. 일정은 시간별 및 일별 빈도로도 설정할 수 있습니다.</block>
+  <block id="40d8a3c56d215e830feb9897421666aa" category="doc">NetApp Copy and Sync의 라이선스에 대해 알아보세요.</block>
+  <block id="ae93ff3e8a6fd875fb9dfdd2fbbbf45f" category="doc">NetApp Copy and Sync 관련 기술 FAQ</block>
+  <block id="6809b01eb3405addc3e0512ed7f6cf9e" category="doc">NetApp Copy and Sync의 네트워킹 요구 사항</block>
+  <block id="db37b7240360f352ce5e2bdb05b9f077" category="doc">NetApp Copy and Sync의 소스 및 대상 요구 사항</block>
+  <block id="904c0337845f4afa18ed887f99553600" category="doc">HashiCorp Vault를 NetApp Copy and Sync 데이터 브로커 그룹에 대해 설정합니다</block>
+  <block id="14a4ad343f91944d4a37cf5e5ab5c7b0" category="doc">NetApp Copy and Sync에서 동기화 관계 비용 지불</block>
+  <block id="13ab8acd2a2c62b3e9993669a5c9bc75" category="doc">NetApp Copy and Sync에서 동기화 관계 관리</block>
+  <block id="675cb87abb3564c2962cfc9ccacff637" category="doc">NetApp Copy and Sync에서 보고서 생성 및 확인</block>
+  <block id="65382a5d17ea8050edfbcd3859161b26" category="doc">NetApp Copy and Sync를 사용하여 암호화된 NFS 동기화 관계 생성</block>
+  <block id="03e3965a711708f0b091171972631db2" category="doc">NetApp Copy and Sync에서 오브젝트 스토리지 동기화를 위한 데이터 브로커 준비</block>
+  <block id="14aea1634adf0b6ca9116bee54cc7c9b" category="doc">지원을 위해 NetApp Copy and Sync 등록</block>
 </blocks>

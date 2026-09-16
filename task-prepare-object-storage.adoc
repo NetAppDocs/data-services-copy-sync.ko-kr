@@ -4,7 +4,7 @@ permalink: task-prepare-object-storage.html
 keywords: prepare data broker, data broker, object storage, sync, scanner, configure scanner, bluexp, copy and sync 
 summary: 'NetApp Copy and Sync 사용하여 개체 스토리지 간에 데이터를 동기화하려는 경우(예: Amazon S3에서 Azure Blob으로) 동기화 관계를 만들기 전에 데이터 브로커 그룹을 준비해야 합니다.' 
 ---
-= NetApp Copy and Sync 에서 개체 스토리지 간 데이터를 동기화하기 위한 데이터 브로커 준비
+= NetApp Copy and Sync에서 오브젝트 스토리지 동기화를 위한 데이터 브로커 준비
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

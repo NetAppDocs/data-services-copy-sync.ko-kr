@@ -4,7 +4,7 @@ permalink: reference-requirements.html
 keywords: networking, nfs, cifs, smb, version, connection, google, gcp, azure, blob, service account, resource, permissions, networking, version, ntp, network, protocol, aws efs requirements, efs requirements, s3 requirements, azure blob requirements, blob requirements, azure netapp files, cifs requirements, smb requirements, google cloud storage, gcp, ibm cloud object storage, storagegrid, storage tier, blob storage tier, storage class, s3 storage class, nfs versions, smb versions, box 
 summary: 소스와 타겟이 다음 요구 사항을 충족하는지 확인하세요. 
 ---
-= NetApp Copy and Sync 에서 소스와 대상을 준비합니다.
+= NetApp Copy and Sync의 소스 및 대상 요구 사항
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-nfs-encryption.html
 keywords: encryption, in flight, data in flight, in-flight, data-in-flight, nfs, initiator, listener, port 
 summary: 회사에 엄격한 보안 정책이 있는 경우 전송 중인 데이터 암호화를 사용하여 서로 다른 네트워크에 있는 NFS 서버 간에 데이터를 동기화하세요. 
 ---
-= NetApp Copy and Sync 에서 전송 중 데이터 암호화를 사용하여 NFS 데이터 동기화
+= NetApp Copy and Sync를 사용하여 암호화된 NFS 동기화 관계 생성
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-external-vault.html
 keywords: hashicorp, vault, credentials, secrets, API 
 summary: Amazon S3, Azure 또는 Google Cloud 자격 증명이 필요한 동기화 관계를 만드는 경우 NetApp Copy and Sync 사용자 인터페이스 또는 API를 통해 해당 자격 증명을 지정해야 합니다.  또 다른 방법은 데이터 브로커를 설정하여 외부 HashiCorp Vault에서 직접 자격 증명에 액세스하는 것입니다. 
 ---
-= NetApp Copy and Sync 에서 외부 HashiCorp Vault를 사용하도록 데이터 브로커 그룹 설정
+= HashiCorp Vault를 NetApp Copy and Sync 데이터 브로커 그룹에 대해 설정합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
