@@ -54,7 +54,7 @@ Copy and Sync를 사용하는 데에는 서비스 요금과 리소스 요금이�
 
 * https://aws.amazon.com/marketplace/pp/B01LZV5DUJ["AWS에서 사용량에 따른 가격 책정 보기"^]
 * https://aws.amazon.com/marketplace/pp/B06XX5V3M2["AWS의 연간 가격 보기"^]
-* https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-sync-service?tab=PlansAndPrice["Azure에서 가격 보기"^]
+* https://marketplace.microsoft.com/en-us/product/netapp.cloud-sync-service?tab=PlansAndPrice["Azure에서 가격 보기"^]
 
 
 복사 및 동기화 라이선스는 NetApp 담당자를 통해서도 구매할 수 있습니다.  각 라이선스는 12개월 동안 20개의 동기화 관계를 지원합니다.

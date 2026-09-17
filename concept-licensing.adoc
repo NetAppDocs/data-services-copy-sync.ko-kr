@@ -37,7 +37,7 @@ AWS 또는 Azure에서 Copy and Sync를 구독하면 시간당 요금이나 연�
 
 시간당 요금 지불 구독의 경우, 생성한 동기화 관계 수에 따라 시간당 요금이 청구됩니다.
 
-* https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.cloud-sync-service?tab=PlansAndPrice["Azure에서 가격 보기"^]
+* https://marketplace.microsoft.com/en-us/product/netapp.cloud-sync-service?tab=PlansAndPrice["Azure에서 가격 보기"^]
 * https://aws.amazon.com/marketplace/pp/B01LZV5DUJ["AWS에서 사용량에 따른 가격 책정 보기"^]
 
 
